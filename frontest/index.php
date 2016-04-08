@@ -48,7 +48,7 @@ include_once('../modele/connexion_sql.php'); ?>
     <div class="intro">
       <h2><i class="ion-android-walk"></i> Walk ?  <i class="ion-android-bicycle"></i> Veloh ?  <i class="ion-android-bus"></i> Bus ?</h2>
       <h1>Find the best way to travel into Luxembourg</h1>
-      <a class="btn btn-white" data-scroll href="#">Test Now !</a>
+      <a class="btn btn-white" data-scroll href="#registration">Test Now !</a>
     </div>
   </header>
   <section id="about" class="section about">
@@ -77,7 +77,7 @@ include_once('../modele/connexion_sql.php'); ?>
       <div class="row">
         <div class="col-md-4">
           <i class="ion-android-bicycle"></i>
-          <h3><?php echo get_all_velo(); ?><br>Veloh avaible</h3>
+          <h3><?php echo get_all_velo(); ?><br>Veloh available</h3>
         </div>
         <div class="col-md-4">
           <i class="ion-ios-location"></i>
