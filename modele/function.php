@@ -23,3 +23,17 @@ function get_total_station()
   $result = $req->fetch();
   return ($result['nb']);
 }
+
+function get_all_velo()
+{
+  global $bdd;
+  $req = $bdd->prepare('SELECT id FROM `stations_velo`');
+  $req->execute();
+  $total = 0;
+  while ($donne = $req->fetch())
+    {
+      $temp = get_info_station($donne['id']);
+      $total += $temp['nb_dispo'];
+    }
+  return ($total);
+}
