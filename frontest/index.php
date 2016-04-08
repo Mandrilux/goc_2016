@@ -94,7 +94,7 @@ include_once('../modele/connexion_sql.php'); ?>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Registration &amp; Pricing</h3>
+          <h3 class="section-title">Find the closest Veloh station</h3>
         </div>
       </div>
 
