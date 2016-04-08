@@ -75,7 +75,7 @@
                 <div class="col-sm-3">
 
                     <i class="ion-ios-location"></i>
-                    <h3><?php echo get_total_station(); ?><br>Veloh station</h3>
+                    <h3>XX<br>Veloh station</h3>
 
                 </div>
                 <div class="col-sm-3">
