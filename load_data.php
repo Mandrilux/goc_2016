@@ -7,6 +7,11 @@ $list_station_dec = json_decode($list_station);
 
 var_dump($list_station_dec);
 
-//$rep = $bdd->prepare()
+$rep = $bdd->prepare('INSERT INTO `stations_velo`(`id`, `nom`, `adresse`, `latitude`, `longitude`) VALUES (:id,:nom,:adresse,:latitude,:longitude');
+$rep->execute(array('id'=>1,
+		    'nom'=>"lol",
+		    'adresse'=>"mdr",
+		    'latitude'=>1.5,
+		    'longitude'=>5.1));
 
 ?>
