@@ -58,9 +58,12 @@ include_once('../modele/connexion_sql.php'); ?>
           <h3 class="section-title multiple-title">What is Our Goal?</h3>
           <p class="text-center">Make your everyday life easier</p>
           <p class="text-center">
-          <b>Find the closest and fastest way to travel.</b><br>
-          <b>Use your location to provide a plan to your destination.</b><br>
-          <b></b><br>
+            <b>Find the closest and fastest way to travel.</b>
+            <br>
+            <b>Use your location to provide a plan to your destination.</b>
+            <br>
+            <b></b>
+            <br>
           </p>
         </div>
         <!-- /.col-sm-6 -->
@@ -94,7 +97,7 @@ include_once('../modele/connexion_sql.php'); ?>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Find the closest Veloh station</h3>
+          <h3 class="section-title">Find the closest station</h3>
         </div>
       </div>
 
@@ -107,16 +110,17 @@ include_once('../modele/connexion_sql.php'); ?>
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Longitude" id="fname" name="fname" required>
             </div>
-
+          </div>
+          <div class="col-sm-6">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Latitude" id="lname" name="lname" required>
             </div>
-        </div>
-        <div class="text-center mt20">
-          <button type="submit" class="btn btn-black" id="registration-submit-btn">Submit</button>
-        </div>
+          </div>
+          <div class="text-center mt20">
+            <button type="submit" class="btn btn-black" id="registration-submit-btn">Submit</button>
+          </div>
       </form>
-    </div>
+      </div>
   </section>
 
   <section id="contribution" class="section bg-image-2 contribution">
