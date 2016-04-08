@@ -57,9 +57,9 @@ include_once('../modele/connexion_sql.php'); ?>
         <div class=".col-xs-4 .col-sm-8 .col-md-6 .col-md-offset-3">
           <h3 class="section-title multiple-title">What is Our Goal?</h3>
           <p class="text-center">Our goal is to make your everyday life easier</p>
-          <ul class="text-center">
-            <li>Something</li>
-          </ul>
+          <p class="text-center">
+            <b>Something</b>
+          </p>
         </div>
         <!-- /.col-sm-6 -->
       </div>
