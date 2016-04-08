@@ -53,7 +53,7 @@
                 <div class=".col-xs-4 .col-sm-8 .col-md-6 .col-md-offset-3">
                     <h3 class="section-title multiple-title">What is Our Goal?</h3>
                     <p class="text-center">Our goal is to make your everyday life easier</p>
-                    <ul class="list-arrow-right">
+                    <ul>
                         <li>Learn from the best Asian Social Media Experts &amp; Case Studies</li>
                         <li>Have dedicated 2-to-1 meetings with the experts</li>
                         <li>Reach more consumers for less by learning new digital media skills</li>
