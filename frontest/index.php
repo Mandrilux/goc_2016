@@ -1,4 +1,4 @@
-<?php include_once('../modele/function.php'); ?>
+<!--<?php include_once('../modele/function.php'); ?>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
