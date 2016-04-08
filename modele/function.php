@@ -22,5 +22,3 @@ function get_total_station()
   $result = $req->fetch();
   return ($result['nb']);
 }
-
-echo get_total_station();
