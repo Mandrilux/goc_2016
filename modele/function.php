@@ -1,3 +1,4 @@
+<?php
 function get_info_station($id)
 {
   $dataJ = file_get_contents('https://api.jcdecaux.com/vls/v1/stations/'.$id.'?contract=Luxembourg&apiKey=58a7596376f3ae8c4af270a5abc6b7c04ecff44c');
