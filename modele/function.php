@@ -17,6 +17,7 @@ function get_info_station($id)
 
 function get_total_station()
 {
+  global $bdd;
   $req = $bdd->prepare('SELECT COUNT(*) AS "nb" FROM `stations_velo`');
   $req->execute();
   $result = $req->fetch();
