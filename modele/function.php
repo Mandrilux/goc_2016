@@ -11,4 +11,10 @@ function get_info_station($id)
   return ($new_data);
 }
 
-var_dump(get_info_station("33"));
+function get_total_station()
+{
+  $req = $bdd->prepare('SELECT COUNT(*) AS "nb" FROM `station`');
+  $req->execute();
+  $result = $req->fetch();
+  return ($result['nb'])
+}
