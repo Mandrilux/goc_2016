@@ -13,6 +13,7 @@ foreach($list_station_dec as $data)
 {
   //  print($data->{'number'});
   $id = $bdd->prepare('SELECT count(id) AS nb FROM `stations_velo` WHERE `id` = :id');
+  $id->execute(array('id'=>$data->{'number'}));
   $is_id_exist = $id->fetch();
   if ($is_id_exist['nb'] > 0)
   {
