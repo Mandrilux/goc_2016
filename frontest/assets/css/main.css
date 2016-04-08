@@ -225,7 +225,7 @@ ul li {
 }
 
 .bg-image-1 {
-  background: url(../images/backgrounds/bg-1.jpg) no-repeat center center/cover;
+  background: url(../images/photos/plan2.jpg) no-repeat center center/cover;
 }
 .bg-image-1::before {
   background-color: rgba(0, 0, 0, 0.7);
