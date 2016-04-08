@@ -5,9 +5,6 @@ include('modele/connexion_sql.php');
 $list_station = file_get_contents('https://developer.jcdecaux.com/rest/vls/stations/Luxembourg.json');
 $list_station_dec = json_decode($list_station);
 
-
-
-echo "mdr";
 //print_r($list_station_dec);
 foreach($list_station_dec as $data)
 {
@@ -17,7 +14,7 @@ foreach($list_station_dec as $data)
   $is_id_exist = $id->fetch();
   if ($is_id_exist['nb'] > 0)
   {
-    echo $data->{'number'}." update<br>";
+    //echo $data->{'number'}." update<br>";
     $rep = $bdd->prepare('UPDATE `stations_velo` SET `nom` = :nom, `adresse` = :adresse, `latitude` = :latitude, `longitude` = :longitude WHERE `id` = :id');
     $rep->execute(array('id'=>$data->{'number'},
 			'nom'=>$data->{'name'},
@@ -27,7 +24,6 @@ foreach($list_station_dec as $data)
   }
   else
   {
-    echo "INSERT";
     $rep = $bdd->prepare('INSERT INTO `stations_velo`(`id`, `nom`, `adresse`, `latitude`, `longitude`) VALUES (:id,:nom,:adresse,:latitude,:longitude)');
     $rep->execute(array('id'=>$data->{'number'},
 			'nom'=>$data->{'name'},
