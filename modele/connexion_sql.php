@@ -6,7 +6,6 @@ try
   $bdd = new PDO('mysql:host=synoria.com;dbname=epitech', 'epitech', 'epitech');
 }
 catch(Exception $e)
-
 {
   die('Erreur : '.$e->getMessage());
 
