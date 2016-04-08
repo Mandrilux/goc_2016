@@ -1,4 +1,4 @@
-<!--<?php include_once('../modele/function.php'); ?>-->
+<?php include_once('../modele/function.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +75,7 @@
                 <div class="col-sm-3">
 
                     <i class="ion-ios-location"></i>
-                    <h3><!--<?php echo get_total_station(); ?>-->XX<br>Veloh station</h3>
+                    <h3><?php echo get_total_station(); ?><br>Veloh station</h3>
 
                 </div>
                 <div class="col-sm-3">
