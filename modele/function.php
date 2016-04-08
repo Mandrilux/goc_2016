@@ -7,7 +7,7 @@ function get_info_station($id)
 		    'status' => $data->{'status'},
 		    'nb_place' => $data->{'bike_stands'},
 		    'nb_libre' => $data->{'available_bike_stands'},
-		    'nb_dispo' -> $data->{'available_bikes'});
+		    'nb_dispo' => $data->{'available_bikes'});
   return ($new_data);
 }
 
