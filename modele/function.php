@@ -14,7 +14,6 @@ function curl_get_file_contents($URL)
   if ($contents) return $contents;
   else return FALSE;
 }
-}
 
 function get_info_station($id)
 {
