@@ -1,4 +1,5 @@
-<?php include_once('../modele/function.php'); ?>
+<?php include_once('../modele/function.php');
+include_once('../modele/connexion_sql.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
