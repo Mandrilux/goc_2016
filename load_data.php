@@ -16,8 +16,10 @@ foreach($list_station_dec as $data)
   $is_id_exist = $id->fetch();
   if ($is_id_exist['nb'] > 0)
   {
-    $rep = $bdd->prepare('UPDATE `stations_velo` SET `nom` = :nom, `adresse` = :adresse, `latitude` = :latitude, `longitude` = :longitude');
-    $rep->execute(array('nom'=>$data->{'name'},
+    echo $data->{'number'}." update<br>";
+    $rep = $bdd->prepare('UPDATE `stations_velo` SET `nom` = :nom, `adresse` = :adresse, `latitude` = :latitude, `longitude` = :longitude WHERE `id` = :id');
+    $rep->execute(array('id'=>$data->{'number'},
+			'nom'=>$data->{'name'},
 			'adresse'=>$data->{'address'},
 			'latitude'=>$data->{'latitude'},
 			'longitude'=>$data->{'longitude'}));    
