@@ -11,13 +11,13 @@ $list_station_dec = json_decode($list_station);
 //print_r($list_station_dec);
 foreach($list_station_dec as $data)
 {
-  print($data->{'number'});
-  //$rep = $bdd->prepare('INSERT INTO `stations_velo`(`id`, `nom`, `adresse`, `latitude`, `longitude`) VALUES (:id,:nom,:adresse,:latitude,:longitude)');
-/*$rep->execute(array('id'=>1,
-		    'nom'=>"lol",
-		    'adresse'=>"mdr",
-		    'latitude'=>1.5,
-		    'longitude'=>5.1));
- */
+//  print($data->{'number'});
+ $rep = $bdd->prepare('INSERT INTO `stations_velo`(`id`, `nom`, `adresse`, `latitude`, `longitude`) VALUES (:id,:nom,:adresse,:latitude,:longitude)');
+$rep->execute(array('id'=>$data->{'number'},
+		    'nom'=>$data->{'name'},
+		    'adresse'=>$data->{'address'},
+		    'latitude'=>$data->{'latitude'},
+		    'longitude'=>$data->{'longitude'}));
+
 }
 ?>
