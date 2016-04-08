@@ -13,7 +13,7 @@ function get_info_station($id)
 
 function get_total_station()
 {
-  $req = $bdd->prepare('SELECT COUNT(*) AS "nb" FROM `station`');
+  $req = $bdd->prepare('SELECT COUNT(*) AS "nb" FROM `station_velo`');
   $req->execute();
   $result = $req->fetch();
   return ($result['nb']);
