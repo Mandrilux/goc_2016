@@ -1,5 +1,5 @@
-<!--<?php include_once('../modele/function.php');
-include_once('../modele/connexion_sql.php'); ?>-->
+<?php include_once('../modele/function.php');
+include_once('../modele/connexion_sql.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,11 +72,11 @@ include_once('../modele/connexion_sql.php'); ?>-->
       <div class="row">
         <div class="col-md-4">
           <i class="ion-android-bicycle"></i>
-          <h3><!--<?php echo get_all_velo(); ?>--><br>Veloh avaible</h3>
+          <h3><?php echo get_all_velo(); ?><br>Veloh avaible</h3>
         </div>
         <div class="col-md-4">
           <i class="ion-ios-location"></i>
-          <h3><!--<?php echo get_total_station(); ?>--><br>Veloh station</h3>
+          <h3><?php echo get_total_station(); ?><br>Veloh station</h3>
           <script>
           var nb = <?php get_total_station(); ?>
           var options = {
