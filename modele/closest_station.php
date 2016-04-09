@@ -32,4 +32,7 @@ function get_closest_station($longitude, $latitude)
   echo $id_min_dist;
   return get_info_station($id_min_dist);
 }
+
+get_closest_station(6, 49);
+
 ?>
