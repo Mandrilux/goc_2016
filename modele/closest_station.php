@@ -16,38 +16,39 @@ function get_closest_station($longitude, $latitude)
   //while ($stop == 1)
   //{
     //$stop = 0;
-    foreach($tab_data as $data2)
-    {
-      //echo "lol";
+  foreach($tab_data as $data2)
+  {
+    //echo "lol";
     $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyCnd5XCv5ks4QDZUhkVbthRlTdrTeij5-Y');
     $dist = json_decode($dist);
-    echo "<br><br>";
-    var_dump($dist);
-      $cur_dist = $dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'};
-      if (isset($min_dist) == false)
-      {
-	$id_min_dist = $data2['id'];
-	$min_dist = $cur_dist;
-      }
-      elseif ($min_dist > $cur_dist) 
-      {
-	$id_min_dist = $data2['id'];
-	$min_dist = $cur_dist;
-      }
-    }
-    //echo $min_dist;
-    //echo $id_min_dist;
-    $info = get_info_station($id_min_dist);
-    if ($info['dispo_velo'] == 0)
+    //echo "<br><br>";
+    //var_dump($dist);
+    $cur_dist = $dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'};
+    if (isset($min_dist) == false)
     {
-      $i = 0;
-      $stop = 1;
-      while($tab_data[$i])
-      {
+      $id_min_dist = $data2['id'];
+      $min_dist = $cur_dist;
+    }
+    elseif ($min_dist > $cur_dist) 
+    {
+      $id_min_dist = $data2['id'];
+      $min_dist = $cur_dist;
+    }
+  }
+  //echo $min_dist;
+  //echo $id_min_dist;
+  $info = get_info_station($id_min_dist);
+  if ($info['dispo_velo'] == 0)
+  {
+    $i = 0;
+    $stop = 1;
+    echo "OMGOMGOMGOMGOMG";
+    while($tab_data[$i])
+    {
 	if ($tab_data[$i]['id'] == $id_min_dist)
      	  unset($tab_data[$i]);
-	$i++;
-      }
+      $i++;
+    }
     //}
   }
   return ($info);
