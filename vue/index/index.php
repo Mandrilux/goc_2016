@@ -233,7 +233,7 @@
           <b><span style='color:green'><?php echo $data['status']; ?></span></b>
         </div>
 
-	  <?php if (isset($arrival) { ?>
+	  <?php if (isset($arrival)) { ?>
 	  <div class="col-md-12">
             <h3 class="section-title text-center">Station d\'arrivé</h3>
           </div>
