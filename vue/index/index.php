@@ -27,6 +27,8 @@
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a data-scroll href="#about">Index</a></li>
           <li><a data-scroll href="#about">Our Goal</a></li>
+          <li><a data-scroll href="#closestation">Find Station</a></li>
+          <li><a data-scroll href="#health">Health</a></li>
         </ul>
       </div>
     </div>
@@ -132,33 +134,6 @@
 	    </div>
 	    <div class="container col-md-12">
 	    <br>
-<!--	    <script>
-	    var myCenter = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
-var station = new google.maps.LatLng(<?php echo $data['latitude'].', '.$data['longitude']; ?>);
-
-          function initialize() {
-            var mapProp = {
-              center: myCenter,
-              zoom: 12,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-            var marker = new google.maps.Marker({
-              position: myCenter,
-            });
-            var marker2 = new google.maps.Marker({
-              position: station,
-            });
-
-            marker.setMap(map);
-            marker2.setMap(map);
-          }
-
-          google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-        <div id="googleMap" style="width:100%;height:450px;"></div>-->
         <script>
         var Center = new google.maps.LatLng(49.607232, 6.121065);
   var directionsDisplay;
@@ -176,12 +151,12 @@ var station = new google.maps.LatLng(<?php echo $data['latitude'].', '.$data['lo
     map = new google.maps.Map(document.getElementById("gmap"), properties);
     directionsDisplay.setMap(map);
 
-    /*var marker = new google.maps.Marker({
-      position: Center,
+    var marker = new google.maps.Marker({
+      position: google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
       animation: google.maps.Animation.BOUNCE,
-    });*/
+    });
 
-    /*marker.setMap(map);*/
+    marker.setMap(map);
     Route();
   }
 
