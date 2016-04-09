@@ -170,41 +170,54 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
           google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <div id="googleMap" style="width:100%;height:450px;"></div>-->
-        <div id="map"></div>
         <script>
-      function initMap() {
-        var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: {lat: 6.85, lng: 46.65}
-        });
-        directionsDisplay.setMap(map);
+        var Center = new google.maps.LatLng(18.210885, -67.140884);
+  var directionsDisplay;
+  var directionsService = new google.maps.DirectionsService();
+  var map;
 
-        var onChangeHandler = function() {
-          calculateAndDisplayRoute(directionsService, directionsDisplay);
-        };
-        /*document.getElementById('start').addEventListener('change', onChangeHandler);
-        document.getElementById('end').addEventListener('change', onChangeHandler);*/
-      }
+  function initialize() {
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var properties = {
+      center: Center,
+      zoom: 20,
+      mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
 
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        directionsService.route({
-          origin: google.maps.LatLng(6.85,46.65),
-          destination: google.maps.LatLng(6.86, 46.65),
-          travelMode: google.maps.TravelMode.DRIVING
-        }, function(response, status) {
-          if (status === google.maps.DirectionsStatus.OK) {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
+    map = new google.maps.Map(document.getElementById("map"), properties);
+    directionsDisplay.setMap(map);
+
+    var marker = new google.maps.Marker({
+      position: Center,
+      animation: google.maps.Animation.BOUNCE,
+    });
+
+    marker.setMap(map);
+    Route();
+  }
+
+  function Route() {
+
+    var start = new google.maps.LatLng(18.210885, -67.140884);
+    var end = new google.maps.LatLng(18.211685, -67.141684);
+    var request = {
+      origin: start,
+      destination: end,
+      travelMode: google.maps.TravelMode.WALKING
+    };
+    directionsService.route(request, function(result, status) {
+      if (status == google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(result);
+      } else {
+        alert("couldn't get directions:" + status);
       }
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs&callback=initMap">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <div id="map"></div>
       </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
