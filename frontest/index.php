@@ -139,6 +139,7 @@ include_once('../modele/connexion_sql.php'); ?>
   var test = new countUp("count", 1350, 10000, 0, 5000, options);
   test.start();
   </script>
+  <div id="map"></div>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
       <div class="row">
