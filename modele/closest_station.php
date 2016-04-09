@@ -15,8 +15,8 @@ function get_close($longitude, $latitude)
   $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyC5WbmOFch6mj7T1L6CXjRMJ0sjdJuFlpc');
     
   //}
-//  var_dump($dist);
-echo $dist['rows'];
+  var_dump($dist);
+  echo "<br><br>".$dist->{'rows'};
 return $dist;
 }
 
