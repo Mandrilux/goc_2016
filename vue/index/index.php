@@ -183,12 +183,12 @@
               destination: end,
               travelMode: google.maps.TravelMode.WALKING
             };
-	    <?php /*if (isset($arrival)) { ?>
+	    <?php if (isset($arrival)) { ?>
 	    var marker = new.google.maps.Marker({
-	      position: dest,
+	      position: dest
 		  });
 
-		  <?php }*/ ?>
+		  <?php } ?>
             directionsService.route(request, function(result, status) {
               if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(result);
