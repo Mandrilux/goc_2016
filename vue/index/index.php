@@ -200,25 +200,20 @@
           </div>
           <br>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <?php echo $data['nom']; ?>
-          <br>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
         <?php echo $data['nb_dispo']; ?>
-        <br>
       </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
         <?php echo $data['nb_libre']; ?>
-        <br>
       </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
         <?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?>
-        <br>
       </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
         <?php echo $data['status']; ?>
-        <br>
       </div>
         <?php } ?>
 
