@@ -87,6 +87,18 @@ include_once('../modele/connexion_sql.php'); ?>
           <i class="ion-android-bus"></i>
           <h3>XX<br>Bus Stop</h3>
         </div>
+        <div id="teste"></div>
+        <script>
+        var options = {
+          useEasing : true,
+          easingFn : null,
+          useGrouping : true,
+          separator : ',',
+          decimal : '.'
+        }
+        var demo = new CountUp("teste", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
+        demo.start();
+        </script>
       </div>
       <!-- row -->
     </div>
@@ -127,18 +139,6 @@ include_once('../modele/connexion_sql.php'); ?>
         width="100%" height="450" frameborder="0" style="border:0"></iframe>
       </div>
   </section>
-  <div id="teste"></div>
-  <script>
-  var options = {
-    useEasing : true,
-    easingFn : null,
-    useGrouping : true,
-    separator : ',',
-    decimal : '.'
-  }
-  var demo = new CountUp("teste", 24.02, 94.62, 0, 2, options);
-  demo.start();
-  </script>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
       <div class="row">
