@@ -132,6 +132,7 @@ if (navigator.geolocation)
           <div class="col-md-12" id="registration-msg">
             <div class="text-center" id="alert">Please activate your localisation or enter manualy your coordinates
 	    </div>
+      <br>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
