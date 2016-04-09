@@ -11,7 +11,7 @@ curl_close($ch);
 $elements = explode(";", $resultat);
 foreach ($elements as $data)
 {
-  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data.';';
+  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
   $ch = curl_init();
   curl_setopt($ch, CURLOPT_URL, $URL);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
