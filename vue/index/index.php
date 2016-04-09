@@ -147,8 +147,8 @@
       </div>
       <div class="container col-md-12">
         <br>
+        <div id="map"></div>
         <script>
-
   function initMap() {
     var myLatLng = {lat: -25.363, lng: 131.044};
 
