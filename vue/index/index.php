@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="https://inorganik.github.io/countUp.js/dist/countUp.js"></script>
 </head>
 
@@ -140,26 +141,29 @@
       </div>
       <div class="container col-md-12">
         <br>
-        <div id="map"></div>
         <script>
-  function initMap() {
-    var myLatLng = {lat: -25.363, lng: 131.044};
+        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: myLatLng
-    });
+        function initialize()
+        {
+        var mapProp = {
+          center:myCenter,
+          zoom:5,
+          mapTypeId:google.maps.MapTypeId.ROADMAP
+          };
 
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Hello World!'
-    });
-  }
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs&callback=initMap">
-</script>
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+        var marker=new google.maps.Marker({
+          position:myCenter,
+          });
+
+        marker.setMap(map);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        <div id="googleMap" style="width:500px;height:380px;"></div>
       <!--<iframe src="https://www.google.com/maps/embed/v1/view?zoom=13&center=49.6116%2C6.1319&key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs"
         width="100%" height="450" frameborder="0" style="border:0"></iframe>-->
       </div>
