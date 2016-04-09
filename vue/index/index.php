@@ -184,7 +184,7 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
       mapTypeId: google.maps.MapTypeId.SATELLITE
     };
 
-    map = new google.maps.Map(document.getElementById("map"), properties);
+    map = new google.maps.Map(document.getElementById("gmap"), properties);
     directionsDisplay.setMap(map);
 
     var marker = new google.maps.Marker({
@@ -214,7 +214,7 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
     });
   }
     </script>
-        <div id="map" style="width:100%;height:450px;"></div>
+        <div id="gmap" style="width:100%;height:450px;"></div>
             </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
