@@ -77,7 +77,7 @@ include_once('../modele/connexion_sql.php'); ?>
       <div class="row">
         <div class="col-md-4">
           <i class="ion-android-bicycle"></i>
-          <h3><div id="velo"></div><br>Veloh available</h3>
+          <h3><p id="velo"></div><br>Veloh available</h3>
         </div>
         <div class="col-md-4">
           <i class="ion-ios-location"></i>
