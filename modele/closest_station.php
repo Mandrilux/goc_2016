@@ -17,13 +17,20 @@ function get_close($longitude, $latitude)
     //var_dump($);
     $cur_dist = $dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'};
     if (isset($min_dist) == false)
+    {
+      $id_min_dist = $data2['id'];
       $min_dist = $cur_dist;
+    }
     elseif ($min_dist > $cur_dist) 
+    {
+      $id_min_dist = $data2['id'];
       $min_dist = $cur_dist;
-    //print_r($lol);
+    }
+      //print_r($lol);
   }
   echo $min_dist;
-  return $min_dist;
+  echo "          ".$id_min_dist;
+  return $id_min_dist;
 }
 
 get_close(6.126, 49.6173);
