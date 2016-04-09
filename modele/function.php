@@ -67,7 +67,7 @@ function get_closest_station($longitude, $latitude)
 	  $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyBXABVe6vc24YQORKbkGZoDuRNrHG2N7dU');
 	  $dist = json_decode($dist);
 	  //var_dump($dist);
-	  if (!issset($dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'}))
+	  if (!isset($dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'}))
 	    {
 	      die("error");
 	    }
