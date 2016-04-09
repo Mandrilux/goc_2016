@@ -143,6 +143,8 @@ ul li {
 .section-title {
   color: #313131;
   letter-spacing: 1px;
+  width: auto;
+  height: auto;
   /*margin: 0 0 20px;*/
   text-transform: uppercase;
   text-align: center;
