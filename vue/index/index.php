@@ -143,12 +143,13 @@
         <br>
         <script>
         var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+        var station=new google.maps.LatLng(51.50870,-0.120852);
 
         function initialize()
         {
         var mapProp = {
           center:myCenter,
-          zoom:5,
+          zoom:12,
           mapTypeId:google.maps.MapTypeId.ROADMAP
           };
 
@@ -157,8 +158,12 @@
         var marker=new google.maps.Marker({
           position:myCenter,
           });
+        var marker2=new google.maps.Marker({
+          position:station,
+          });
 
-        marker.setMap(map);
+          marker.setMap(map);
+          marker2.setMap(map);
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);
