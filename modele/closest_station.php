@@ -20,6 +20,7 @@ function get_closest_station($longitude, $latitude)
     {
       $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyCnd5XCv5ks4QDZUhkVbthRlTdrTeij5-Y');
       $dist = json_decode($dist);
+      var_dump($dist);
       $cur_dist = $dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'};
       if (isset($min_dist) == false)
       {
