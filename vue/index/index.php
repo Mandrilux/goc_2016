@@ -79,11 +79,11 @@
   <section id="facts" class="section bg-image-1 facts text-center">
     <div class="container">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
           <i class="ion-android-bicycle"></i>
           <h3><div id="velo"></div><br>Veloh available</h3>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
           <i class="ion-ios-location"></i>
           <h3><div id="station"></div><br>Veloh station</h3>
         </div>
