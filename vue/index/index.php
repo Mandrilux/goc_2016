@@ -190,8 +190,8 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
 
       function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-          origin: 6.85,46.65,
-          destination: 6.86, 46.65,
+          origin: LatLng(6.85,46.65),
+          destination: LatLng(6.86, 46.65),
           travelMode: google.maps.TravelMode.DRIVING
         }, function(response, status) {
           if (status === google.maps.DirectionsStatus.OK) {
