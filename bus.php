@@ -1,5 +1,5 @@
 <?php
-
+1;2802;0c
 include_once("modele/function.php");
 
 $URL = 'http://travelplanner.mobiliteit.lu/hafas/query.exe/dot?performLocating=2&tpl=stop2csv&look_maxdist=150000&look_x=6112550&look_y=49610700&stationProxy=yes';
@@ -10,15 +10,17 @@ curl_setopt($ch, CURLOPT_USERAGENT, '');
 $resultat = curl_exec ($ch);
 curl_close($ch);
 $l = 0;
+$i = 0;
 $elements = explode(";", $resultat);
 foreach ($elements as $data)
 {
   $ch2 = curl_init();
   if ($l)
   {
-    exit(0);
     $data = substr($data, 2,strlen($data) - 2);
   }
+  if ($i == 10)
+    exit(0);
   $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
   curl_setopt($ch2, CURLOPT_URL, $URL);
   curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
@@ -31,7 +33,8 @@ foreach ($elements as $data)
     //echo "lol";
   var_dump($resultat);
   echo "<br />";
-    //}
+  //}
+  $i++;
   $l = 1;
 }
 ?>
