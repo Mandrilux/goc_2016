@@ -28,15 +28,15 @@ foreach ($elements as $data)
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
   $resultat = json_decode($resultat);
- // if (isset($resultat->{'stop'}))
-  //{
+  if (isset($resultat->{'Departure'}))
+  {
     //echo "lol";
   var_dump($resultat);
   echo "<br />";
   echo "<br />";
   echo "<br />";
   echo "<br />";
-  //}
+  }
   $i++;
   $l = 1;
 }
