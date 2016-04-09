@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game of code 2016</title>
+  <title>Game of code 2016, team ADNEOM Student</title>
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
@@ -22,7 +22,7 @@
           <a class="logo" href="index.html">
             <!-- logo image  -->
             <!-- <img src="../../assets/images/logo.png" alt="Logo"> -->
-            Game of code 2016
+            Game of code 2016, team ADNEOM Student
           </a>
         </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
