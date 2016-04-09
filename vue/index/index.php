@@ -19,6 +19,7 @@ if (navigator.geolocation)
   {
     navigator.geolocation.getCurrentPosition(function(position)
 					     {
+					       console.log(position);
 					       lati = position.coords.latitude;
 					       logi = position.coords.longitude;
 					     });
