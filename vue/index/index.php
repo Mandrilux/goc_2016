@@ -187,19 +187,19 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
     map = new google.maps.Map(document.getElementById("gmap"), properties);
     directionsDisplay.setMap(map);
 
-    var marker = new google.maps.Marker({
+    /*var marker = new google.maps.Marker({
       position: Center,
       animation: google.maps.Animation.BOUNCE,
-    });
+    });*/
 
-    marker.setMap(map);
+    /*marker.setMap(map);*/
     Route();
   }
 
   function Route() {
 
     var start = new google.maps.LatLng(49.607232, 6.121065);
-    var end = new google.maps.LatLng(49.607238, 6.121066);
+    var end = new google.maps.LatLng(49.607248, 6.121076);
     var request = {
       origin: start,
       destination: end,
