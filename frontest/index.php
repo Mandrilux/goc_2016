@@ -104,7 +104,6 @@ include_once('../modele/connexion_sql.php'); ?>
         var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
         velo.start();
         station.start();
-}
         </script>
       </div>
       <!-- row -->
