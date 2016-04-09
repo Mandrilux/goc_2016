@@ -195,7 +195,12 @@ if (navigator.geolocation)
         </script>
         <div id="gmap" style="width:100%;height:450px;"></div>
 
-
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title">Station information</h3>
+          </div>
+          <br>
+        </div>
 	    <?php echo $data['nom']; ?><br>
 	    <?php echo $data['nb_dispo']; ?><br>
 	    <?php echo $data['nb_libre']; ?><br>
