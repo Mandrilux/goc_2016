@@ -200,11 +200,11 @@
           </div>
           <br>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 text-center">
           <b>Name:</b><br><?php echo $data['nom']; ?>
         </div>
-        <div class="col-md-2">
-        <b>VeloH Available: </b><?php echo $data['nb_dispo']; ?>
+        <div class="col-md-2 text-center">
+        <b>VeloH Available: </b><br><?php echo $data['nb_dispo']; ?>
       </div>
         <div class="col-md-2">
         <?php echo $data['nb_libre']; ?>
