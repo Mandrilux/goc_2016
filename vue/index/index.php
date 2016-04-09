@@ -180,7 +180,7 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
     directionsDisplay = new google.maps.DirectionsRenderer();
     var properties = {
       center: Center,
-      zoom: 12,
+      zoom: 8,
       mapTypeId: google.maps.MapTypeId.SATELLITE
     };
 
@@ -199,7 +199,7 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
   function Route() {
 
     var start = new google.maps.LatLng(49.607232, 6.121065);
-    var end = new google.maps.LatLng(49.607248, 6.121076);
+    var end = new google.maps.LatLng(49.607248, 6.321076);
     var request = {
       origin: start,
       destination: end,
