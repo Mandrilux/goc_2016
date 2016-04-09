@@ -153,7 +153,7 @@ if (navigator.geolocation)
 	      $("#llat").val(lati);
 	    if (logi != 0)
 	      $("#flong").val(logi);
-if (lati == 0 && logi == 0)
+if (error == 1)
   $("#alert").html("Please activate your localisation or enter manualy your coordinates");
 	    </script>
       <div class="container col-md-12">
