@@ -180,7 +180,7 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
     directionsDisplay = new google.maps.DirectionsRenderer();
     var properties = {
       center: Center,
-      zoom: 20,
+      zoom: 12,
       mapTypeId: google.maps.MapTypeId.SATELLITE
     };
 
