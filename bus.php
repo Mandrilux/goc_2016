@@ -33,6 +33,9 @@ foreach ($elements as $data)
     //echo "lol";
   var_dump($resultat);
   echo "<br />";
+  echo "<br />";
+  echo "<br />";
+  echo "<br />";
   //}
   $i++;
   $l = 1;
