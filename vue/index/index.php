@@ -143,6 +143,7 @@
 	    </div>
 	    <div class="container col-md-12">
 	    <br>
+	    <?php var_dump($data); ?>
 	    <script>
 	    var myCenter = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
 var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[0]['longitude']; ?>);
