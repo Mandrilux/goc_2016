@@ -168,7 +168,7 @@
 
         google.maps.event.addDomListener(window, 'load', initialize);
         </script>
-        <div id="googleMap" style="width:500px;height:380px;"></div>
+        <div id="googleMap" style="width:100%;height:450px;"></div>
       <!--<iframe src="https://www.google.com/maps/embed/v1/view?zoom=13&center=49.6116%2C6.1319&key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs"
         width="100%" height="450" frameborder="0" style="border:0"></iframe>-->
       </div>
