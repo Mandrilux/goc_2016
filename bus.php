@@ -16,7 +16,7 @@ foreach ($elements as $data)
   if ($l)
   {
     echo "sub";
-    $data = substr($data, 1);
+    $data = substr($data, 0,1);
     }
   echo '['.$data.']';
 //  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
