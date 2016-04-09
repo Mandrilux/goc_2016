@@ -122,14 +122,14 @@ if (navigator.geolocation)
   <section id="closestation" class="section registration">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 text-center">
-          <h3 class="section-title">Find the closest station</h3>
+        <div class="col-md-12">
+          <h3 class="section-title  text-center">Find the closest station</h3>
         </div>
       </div>
       <form action="index.php#closestation" method="post">
         <div class="row">
           <div class="col-md-12" id="registration-msg">
-            <div class="align-center" id="alert">Please activate your localisation or enter manualy your coordinates
+            <div class="text-center" id="alert">Please activate your localisation or enter manualy your coordinates
 	    </div>
           </div>
           <div class="col-sm-6">
