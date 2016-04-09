@@ -194,7 +194,7 @@
           <br>
         </div>
         <div class="col-md-2 text-center">
-          <h5>Name:</h5>
+          <h4>Name:</h4>
           <br>
           <?php echo $data['nom']; ?>
         </div>
