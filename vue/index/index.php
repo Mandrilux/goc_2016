@@ -133,6 +133,11 @@
               <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude" required>
             </div>
           </div>
+	  <div class="col-sm-12">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Adresse" id="adresse" name="adresse" required>
+            </div>
+          </div>
           <div class="text-center mt20">
             <button type="submit" class="btn btn-black">Find</button>
           </div>
