@@ -54,7 +54,7 @@ function get_closest_station($longitude, $latitude)
   global $bdd;
   $data = $bdd->prepare('SELECT id, latitude, longitude FROM `stations_velo`');
   $data->execute();
-  
+
   $tab_data = array();
   while ($data2 = $data->fetch())
     array_push($tab_data, $data2);
@@ -64,7 +64,7 @@ function get_closest_station($longitude, $latitude)
     $stop = 0;
     foreach($tab_data as $data2)
     {
-      $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyCnd5XCv5ks4QDZUhkVbthRl');
+      $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyB0-r4_Rs05QuKWSMQml-Z41wplA-YRkIo');
       $dist = json_decode($dist);
       //var_dump($dist);
       $cur_dist = $dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'};
