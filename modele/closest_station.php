@@ -10,7 +10,7 @@ function get_closest_station($longitude, $latitude)
   $data->execute();
 
   while ($data2 = $data->fetch())
-    $tab_data = array.push($tab_data, $data2);
+    $tab_data = array->push($tab_data, $data2);
   $i = 0;
   while ($tab_data[$i])
   {
