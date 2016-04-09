@@ -234,8 +234,9 @@
         </div>
 
 	  <?php } if (isset($arrival)) { ?>
+      <br><br>
 	  <div class="col-md-12">
-            <h3 class="section-title text-center">Station d\'arrivé</h3>
+            <h3 class="section-title text-center">Station d'arrivé</h3>
           </div>
           <br>
         </div>
