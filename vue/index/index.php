@@ -210,7 +210,7 @@
         <b>Free parking space:</b><br><?php echo $data['nb_libre']; ?>
       </div>
         <div class="col-md-2 text-center">
-          <b>Payment point:</b><br><?php if ($data['banking']) { echo "<span style='color:green' size="3em">YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?>
+          <b>Payment point:</b><br><?php if ($data['banking']) { echo "<span style='color:green' size='3em'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?>
       </div>
         <div class="col-md-2 text-center">
           <b>Status:</b><br><?php echo $data['status']; ?>
