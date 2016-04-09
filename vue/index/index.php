@@ -17,25 +17,20 @@
   <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
     <div class="container">
       <div class="navbar-header">
-        <!-- logo -->
         <div class="site-branding">
-          <a class="logo" href="index.html">
-            <!-- logo image  -->
-            <!-- <img src="../../assets/images/logo.png" alt="Logo"> -->
+          <a class="logo" href="index.php">
             Game of code 2016, team ADNEOM Student
           </a>
         </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
           <span class="sr-only">Test</span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar">test2</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
-      <!-- /.navbar-header -->
       <div class="collapse navbar-collapse" id="navbar-items">
         <ul class="nav navbar-nav navbar-right">
-          <!-- navigation menu -->
           <li class="active"><a data-scroll href="#about">Index</a></li>
           <li><a data-scroll href="#speakers">Truc</a></li>
         </ul>
