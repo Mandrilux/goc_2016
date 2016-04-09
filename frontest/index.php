@@ -120,13 +120,13 @@ include_once('../modele/function.php'); ?>
           <h3 class="section-title">Find the closest station</h3>
         </div>
       </div>
-      <?php
+      <!--<?php
       function getscope()
       {
       $data = get_closest_station($_POST[longitude], $_POST[latitude]);
       echo data['banking'];
       }
-       ?>
+       ?>-->
       <form action="getscope()" id="registration-form">
         <div class="row">
           <div class="col-md-12" id="registration-msg" style="display:none;">
