@@ -9,8 +9,9 @@ function get_closest_station($longitude, $latitude)
   $data = $bdd->prepare('SELECT id, latitude, longitude FROM `stations_velo`');
   $data->execute();
 
-  $data2 = $data->fetch();
+  //$data2 = $data->fetch();
   $tab_data = array($data2);
+  print_r($tab_data);
   while ($data2 = $data->fetch())
     $tab_data = array_push($tab_data, $data2);
   foreach($tab_data as $data2)
