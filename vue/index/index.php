@@ -187,8 +187,8 @@
 	    var marker = new.google.maps.Marker({
 	      position: dest
 		  });
-
-		  <?php } ?>
+	    market.setMap(map);
+		  <?php} ?>
             directionsService.route(request, function(result, status) {
               if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(result);
