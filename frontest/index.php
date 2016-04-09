@@ -121,9 +121,9 @@ include_once('../modele/connexion_sql.php'); ?>
           </div>
       </form>
       </div>
-      <div class="container col-md-3">
+      <div class="container col-md-8">
       <iframe src="https://www.google.com/maps/embed/v1/view?zoom=12&center=49.6116%2C6.1319&key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs"
-        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        width="100%" height="450" frameborder="0" style="border:0 margin-top:5%" allowfullscreen></iframe>
       </div>
   </section>
 
