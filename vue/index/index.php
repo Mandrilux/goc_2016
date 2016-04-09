@@ -135,14 +135,14 @@
             </div>
           </div>
           <div class="text-center mt20">
-            <button type="submit" class="btn btn-black" id="registration-submit-btn">Submit</button>
+            <button type="submit" class="btn btn-black" id="registration-submit-btn">Find</button>
           </div>
       </form>
       </div>
       <div class="container col-md-12">
         <br>
         <script>
-        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+        var myCenter=new google.maps.LatLng(51.508742,-0.120842);
         var station=new google.maps.LatLng(51.50870,-0.120852);
 
         function initialize()
