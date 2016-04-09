@@ -125,22 +125,22 @@
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Latitude" id="llat" name="latitude" required>
+              <input type="text" class="form-control" placeholder="Latitude" id="llat" name="latitude">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude" required>
+              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude">
             </div>
           </div>
           <div class="col-sm-12">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Departure adresse" id="adresse" name="adresse">
+              <input type="text" class="form-control" placeholder="Departure address" id="adresse" name="adresse">
             </div>
           </div>
           <div class="col-sm-12">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Arrival adresse" id="arrival" name="arrival">
+              <input type="text" class="form-control" placeholder="Arrival address" id="arrival" name="arrival">
             </div>
           </div>
           <div class="text-center mt20">
