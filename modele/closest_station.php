@@ -51,6 +51,6 @@ function get_closest_station($longitude, $latitude)
   return ($info);
 }
 
-get_closest_station(49, 6);
+get_closest_station(6.126, 49.6163);
 
 ?>
