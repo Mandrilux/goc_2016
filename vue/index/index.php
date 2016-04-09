@@ -189,6 +189,13 @@ if (navigator.geolocation)
           google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <div id="gmap" style="width:100%;height:450px;"></div>
+	    <?php echo $data['nom']; ?><br>
+	    <?php echo $data['nb_dispo']; ?><br>
+	    <?php echo $data['nb_libre']; ?><br>
+	    <?php echo $data['banking']; ?><br>
+	    <?php echo $data['status']; ?><br>
+
+
       </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
