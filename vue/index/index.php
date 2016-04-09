@@ -196,25 +196,26 @@
         <div class="col-md-2 text-center">
           <h4>Name:</h4>
           <br>
-          <?php echo $data['nom']; ?>
+          <b><?php echo $data['nom']; ?></b>
         </div>
         <div class="col-md-2 text-center">
-          <b><u>VeloH available:</u></b>
+          <h4>VeloH available:</h4>
           <br>
-          <?php echo $data['nb_dispo']; ?>
+          <b><?php echo $data['nb_dispo']; ?></b>
         </div>
         <div class="col-md-2 text-center">
-          <b><u>Free parking space:</u></b>
+          <h4>Free parking space:</h4>
           <br>
-          <?php echo $data['nb_libre']; ?>
+          <b><?php echo $data['nb_libre']; ?></b>
         </div>
         <div class="col-md-2 text-center">
-          <b><u>Payment point:</u><br><?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?></b>
+          <h4>Payment point:</h4>
+          <br><b><?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?></b>
         </div>
         <div class="col-md-2 text-center">
-          <b><u>Status:</u>
+          <h4>Status:</h4>
           <br>
-          <span style='color:green'><?php echo $data['status']; ?></span></b>
+          <b><span style='color:green'><?php echo $data['status']; ?></span></b>
         </div>
         <?php } ?>
 
