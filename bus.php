@@ -26,12 +26,12 @@ foreach ($elements as $data)
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
   $resultat = json_decode($resultat);
-  if (isset($resultat->{'name'}))
-    {
-    echo "lol";
-    echo "<br />";
-    }
+  //if (isset($resultat->{'name'}))
+    //{
+    //echo "lol";
+  var_dump($resultat);
+  echo "<br />";
+    //}
   $l = 1;
 }
-//var_dump($elements);
 ?>
