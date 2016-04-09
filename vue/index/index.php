@@ -24,8 +24,6 @@ if (navigator.geolocation)
 	      $("#flong").val(position.coords.longitude);
 					     });
   }
- else
-   var error = 1;
 </script>
 </head>
 
@@ -131,7 +129,7 @@ if (navigator.geolocation)
       <form action="index.php#closestation" method="post">
         <div class="row">
           <div class="col-md-12" id="registration-msg">
-            <div id="alert">
+            <div class="align-center" id="alert">Please activate your localisation or enter manualy your coordinates
 	    </div>
           </div>
           <div class="col-sm-6">
@@ -149,14 +147,10 @@ if (navigator.geolocation)
           </div>
       </form>
       </div>
+	    <div class="container col-md-12">
+	    <br>
 	    <script>
-if (error == 1)
-  $("#alert").html("Please activate your localisation or enter manualy your coordinates");
-	    </script>
-      <div class="container col-md-12">
-        <br>
-        <script>
-          var Center = new google.maps.LatLng(49.607232, 6.121065);
+	    var Center = new google.maps.LatLng(49.607232, 6.121065);
           var directionsDisplay;
           var directionsService = new google.maps.DirectionsService();
           var map;
