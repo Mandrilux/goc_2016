@@ -2,4 +2,17 @@
 
 git pull
 git_push.sh
-echo -e "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+echo "OelFire"
+
+echo "OelFire"
+
