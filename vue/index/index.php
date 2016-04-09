@@ -121,10 +121,10 @@ if (navigator.geolocation)
 
   <section id="closestation" class="section registration">
     <div class="container">
-      <div class="row">
+      <!--<div class="row">-->
         <div class="col-md-12">
           <center><h3 class="section-title">Find the closest station</h3></center>
-        </div>
+        <!--</div>-->
         <br>
       </div>
       <form action="index.php#closestation" method="post">
