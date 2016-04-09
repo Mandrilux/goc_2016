@@ -179,7 +179,7 @@
         <div class="col-md-12">
           <h3 class="text-uppercase mt0 font-400">Health</h3>
 
-          <p>For 1 miles using a car: 0.099 kg/km CO2 rejected, using a bus: 0.014 kg/km CO2 rejected</p><br>
+          <p>For 1 miles using a car: 0.099 kg/km CO2 rejected, using a bus: 0.014 kg/km CO2 rejected</p>
           <p>Using VeloH you loose approximately 40 calories per miles</p>
 
           <a class="btn btn-white" href="#">Submit</a>
