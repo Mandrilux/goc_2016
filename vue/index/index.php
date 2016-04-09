@@ -198,8 +198,8 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
 
   function Route() {
 
-    var start = new google.maps.LatLng(<?php echo $_POST['latitude']; ?>, <?php echo $_POST['longitude']; ?>);
-    var end = new google.maps.LatLng(<?php echo $data[0]['latitude']; ?>, <?php echo $data[0]['longitude']; ?>);
+    var start = new google.maps.LatLng(49.607232, 6.121065);
+    var end = new google.maps.LatLng(49.607233, 6.121066);
     var request = {
       origin: start,
       destination: end,
