@@ -18,7 +18,7 @@ foreach ($elements as $data)
   curl_setopt($ch2, CURLOPT_USERAGENT, '');
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
-  echo $resultat;
+  echo $URL;
   echo "<br />";
   //  var_dump($resultat);
 }
