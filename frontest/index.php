@@ -77,7 +77,7 @@ include_once('../modele/connexion_sql.php'); ?>
       <div class="row">
         <div class="col-md-4">
           <i class="ion-android-bicycle"></i>
-          <h3><?php echo get_all_velo(); ?><br>Veloh available</h3>
+          <h3><div id="teste"></div><br>Veloh available</h3>
         </div>
         <div class="col-md-4">
           <i class="ion-ios-location"></i>
@@ -87,7 +87,6 @@ include_once('../modele/connexion_sql.php'); ?>
           <i class="ion-android-bus"></i>
           <h3>XX<br>Bus Stop</h3>
         </div>
-        <div id="teste"></div>
         <script>
         var easingFn = function (t, b, c, d) {
           var ts = (t /= d) * t;
