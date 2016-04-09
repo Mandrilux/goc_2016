@@ -194,7 +194,7 @@ if (navigator.geolocation)
 	    <?php echo $data['nom']; ?><br>
 	    <?php echo $data['nb_dispo']; ?><br>
 	    <?php echo $data['nb_libre']; ?><br>
-	    <?php echo $data['banking']; ?><br>
+	    <?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?><br>
 	    <?php echo $data['status']; ?><br>
 <?php } ?>
 
