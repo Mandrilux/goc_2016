@@ -140,8 +140,28 @@
       </div>
       <div class="container col-md-12">
         <br>
-      <iframe src="https://www.google.com/maps/embed/v1/view?zoom=13&center=49.6116%2C6.1319&key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs"
-        width="100%" height="450" frameborder="0" style="border:0"></iframe>
+        <script>
+
+  function initMap() {
+    var myLatLng = {lat: -25.363, lng: 131.044};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Hello World!'
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs&callback=initMap">
+</script>
+      <!--<iframe src="https://www.google.com/maps/embed/v1/view?zoom=13&center=49.6116%2C6.1319&key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs"
+        width="100%" height="450" frameborder="0" style="border:0"></iframe>-->
       </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
