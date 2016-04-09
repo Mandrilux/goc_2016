@@ -121,7 +121,7 @@
           <h3 class="section-title">Find the closest station</h3>
         </div>
       </div>
-      <form action="index.php" method="post" id="registration-form">
+      <form action="index.php" method="post" >
         <div class="row">
           <div class="col-md-12" id="registration-msg" style="display:none;">
             <div class="alert"></div>
@@ -137,14 +137,14 @@
             </div>
           </div>
           <div class="text-center mt20">
-            <button type="submit" class="btn btn-black" id="registration-submit-btn">Find</button>
-          </div>
-      </form>
-      </div>
-      <div class="container col-md-12">
-        <br>
-        <script>
-          var myCenter = new google.maps.LatLng($_POST['latitude'], $_POST['longitude']);
+            <button type="submit" class="btn btn-black" >Find</button>
+	    </div>
+	    </form>
+	    </div>
+	    <div class="container col-md-12">
+	    <br>
+	    <script>
+	    var myCenter = new google.maps.LatLng($_POST['latitude'], $_POST['longitude']);
 var station = new google.maps.LatLng($data[0]->{'latitude'}, $data[0]->{'longitude'});
 
           function initialize() {
