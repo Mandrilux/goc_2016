@@ -79,18 +79,18 @@
   <section id="facts" class="section bg-image-1 facts text-center">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-5">
           <i class="ion-android-bicycle"></i>
           <h3><div id="velo"></div><br>Veloh available</h3>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <i class="ion-ios-location"></i>
           <h3><div id="station"></div><br>Veloh station</h3>
         </div>
-        <div class="col-md-4">
+        <!--<div class="col-md-4">
           <i class="ion-android-bus"></i>
           <h3><div id="bus"></div><br>Bus Stop</h3>
-        </div>
+        </div>-->
         <script>
           var easingFn = function(t, b, c, d) {
             var ts = (t /= d) * t;
@@ -200,19 +200,19 @@
           </div>
           <br>
         </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
           <b>Name:</b><br><?php echo $data['nom']; ?>
         </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
         <b>VeloH available: </b><br><?php echo $data['nb_dispo']; ?>
       </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
         <b>Free parking space:</b><br><?php echo $data['nb_libre']; ?>
       </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
           <b>Payment point:<br><?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?></b>
       </div>
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
           <b>Status:</b><br><?php echo $data['status']; ?>
       </div>
         <?php } ?>
