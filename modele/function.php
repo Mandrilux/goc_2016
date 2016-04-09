@@ -57,7 +57,7 @@ function get_all_velo()
   return ($total);
 }
 
-function get_closest_station($longitude, $latitude)
+function get_closest_station($longitude, $latitude, $adresse, $F)
 {
   global $bdd;
   $data = $bdd->prepare('SELECT id, latitude, longitude FROM `stations_velo`');
@@ -72,7 +72,10 @@ function get_closest_station($longitude, $latitude)
       $stop = 0;
       foreach($tab_data as $data2)
 	{
-	  $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyAjqXObOfejk1teXHKNzixJdCUmT-J1sRw');
+	  if ($adresse || $F)
+	    $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$adresse.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyAjqXObOfejk1teXHKNzixJdCUmT-J1sRw');
+	  else
+	    $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyAjqXObOfejk1teXHKNzixJdCUmT-J1sRw');
 	  $dist = json_decode($dist);
 	  //var_dump($dist);
 	  if (!isset($dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'}))
@@ -94,16 +97,16 @@ function get_closest_station($longitude, $latitude)
 	}
       $info = get_info_station($id_min_dist);
       /* if ($info['nb_dispo'] == 0)
-	{
-	  $i = 0;
-	  $stop = 1;
-	  while($tab_data[$i])
-	    {
-	      if ($tab_data[$i]['id'] == $id_min_dist)
-		unset($tab_data[$i]);
-	      $i++;
-	    }
-	    }*/
+	 {
+	 $i = 0;
+	 $stop = 1;
+	 while($tab_data[$i])
+	 {
+	 if ($tab_data[$i]['id'] == $id_min_dist)
+	 unset($tab_data[$i]);
+	 $i++;
+	 }
+	 }*/
     }
   array_push($info, $min_dist);
   //var_dump($info);
