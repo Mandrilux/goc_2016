@@ -135,7 +135,7 @@
           </div>
 	  <div class="col-sm-12">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Adresse" id="adresse" name="adresse" required>
+              <input type="text" class="form-control" placeholder="Adresse" id="adresse" name="adresse" >
             </div>
           </div>
           <div class="text-center mt20">
