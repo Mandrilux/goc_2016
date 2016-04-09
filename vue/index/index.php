@@ -201,10 +201,10 @@
           <br>
         </div>
         <div class="col-md-3">
-          <?php echo $data['nom']; ?>
+          <b>Name: </b><?php echo $data['nom']; ?>
         </div>
         <div class="col-md-3">
-        <?php echo $data['nb_dispo']; ?>
+        <b>VeloH Available: </b><?php echo $data['nb_dispo']; ?>
       </div>
         <div class="col-md-3">
         <?php echo $data['nb_libre']; ?>
