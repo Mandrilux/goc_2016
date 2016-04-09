@@ -196,7 +196,7 @@
         <br>
         <div class="row">
           <div class="col-md-12">
-            <h3 class="section-title">Station information</h3>
+            <h3 class="section-title text-center">Station information</h3>
           </div>
           <br>
         </div>
@@ -204,16 +204,16 @@
           <b>Name:</b><br><?php echo $data['nom']; ?>
         </div>
         <div class="col-md-2 text-center">
-        <b>VeloH Available: </b><br><?php echo $data['nb_dispo']; ?>
+        <b>VeloH available: </b><br><?php echo $data['nb_dispo']; ?>
       </div>
-        <div class="col-md-2">
-        <?php echo $data['nb_libre']; ?>
+        <div class="col-md-2 text-center">
+        <b>Free parking space:</b><br><?php echo $data['nb_libre']; ?>
       </div>
-        <div class="col-md-2">
-        <?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?>
+        <div class="col-md-2 text-center">
+          <b>Payment point:</b><br><?php if ($data['banking']) { echo "<span style='color:green' size="3em">YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?>
       </div>
-        <div class="col-md-2">
-        <?php echo $data['status']; ?>
+        <div class="col-md-2 text-center">
+          <b>Status:</b><br><?php echo $data['status']; ?>
       </div>
         <?php } ?>
 
