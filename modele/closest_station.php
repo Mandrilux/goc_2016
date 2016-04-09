@@ -13,9 +13,9 @@ function get_closest_station($longitude, $latitude)
   while ($data2 = $data->fetch())
     array_push($tab_data, $data2);
   $stop = 1;
-  while ($stop == 1)
-  {
-    $stop = 0;
+  //while ($stop == 1)
+  //{
+    //$stop = 0;
     foreach($tab_data as $data2)
     {
       //echo "lol";
@@ -46,7 +46,7 @@ function get_closest_station($longitude, $latitude)
      	  unset($tab_data[$i]);
 	$i++;
       }
-    }
+    //}
   }
   return ($info);
 }
