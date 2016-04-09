@@ -128,12 +128,12 @@
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude" required>
+              <input type="text" class="form-control" placeholder="Latitude" id="llat" name="latitude" required>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Latitude" id="llat" name="latitude" required>
+              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude" required>
             </div>
           </div>
           <div class="text-center mt20">
