@@ -9,17 +9,20 @@ function get_close($longitude, $latitude)
   $data = $bdd->prepare('SELECT id, latitude, longitude FROM `stations_velo`');
   $data->execute();
   
- /* while ($data2 = $data->fetch())
- {*/
-  $data2 = $data->fetch();
-  $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyC5WbmOFch6mj7T1L6CXjRMJ0sjdJuFlpc');
-    
-  //}
-  $lol = json_decode($dist);
-  //var_dump($);
-  echo $lol->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'};
-  print_r($lol);
-return $dist;
+  while ($data2 = $data->fetch())
+  {
+    //$data2 = $data->fetch();
+    $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyC5WbmOFch6mj7T1L6CXjRMJ0sjdJuFlpc');
+    $dist = json_decode($dist);
+    //var_dump($);
+    $cur_dist = $dist->{'rows'}[0]->{'elements'}[0]->{'distance'}->{'value'};
+    if (isset($min_dist) == false)
+      $min_dist = $cur_dist;
+    elseif ($min_dist > $cur_dist) 
+    $min_dist = $cur_dist;
+    //print_r($lol);
+  }
+return $min_dist;
 }
 
 get_close(6.126, 49.6173);
