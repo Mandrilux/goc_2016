@@ -25,7 +25,7 @@ foreach ($elements as $data)
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
   $resultat = json_decode($resultat);
-  if (!isset($resultat->{'serverVersion'}))
+  if (isset($resultat->{'name'}))
     {
     echo "lol";
     echo "<br />";
