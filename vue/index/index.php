@@ -177,9 +177,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="text-uppercase mt0 font-400">Submit Your Contribution Work</h3>
+          <h3 class="text-uppercase mt0 font-400">Health</h3>
 
-          <p>You've inspired new consumer, racked up click-thru's, blown-up brand awareness. We can't give you back the weekends you worked, or erase the pain of being forced to make the logo bigger. But if you submit your best work.</p>
+          <p>For 1 miles using a car: 0.099 kg/km CO2 rejected, using a bus: 0.014 kg/km CO2 rejected</p><br>
+          <p>Using VeloH you loose approximately 40 calories per miles</p>
 
           <a class="btn btn-white" href="#">Submit</a>
         </div>
