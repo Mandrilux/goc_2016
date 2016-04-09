@@ -12,13 +12,13 @@ $elements = explode(";", $resultat);
 foreach ($elements as $data)
 {
   $ch2 = curl_init();
-  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
+  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json& '.$data;
   curl_setopt($ch2, CURLOPT_URL, $URL);
   curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($ch2, CURLOPT_USERAGENT, '');
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
-  echo $URL;
+  echo $resultat;
   echo "<br />";
   //  var_dump($resultat);
 }
