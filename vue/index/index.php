@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game of code 2016, team ADNEOM Student</title>
-  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <script src="http://maps.googleapis.com/maps/api/js"></script>
-  <script type="text/javascript" src="https://inorganik.github.io/countUp.js/dist/countUp.js"></script>
+   <head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Game of code 2016, team ADNEOM Student</title>
+   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
+   <link rel="stylesheet" href="../../assets/css/main.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js"></script>
+   <script type="text/javascript" src="https://inorganik.github.io/countUp.js/dist/countUp.js"></script>
+   <script>
+   	 var lati = 0;
+	 var logi = 0;
+if (navigator.geolocation)
+  {
+    navigator.geolocation.getCurrentPosition(function(position)
+					     {
+					       lati = position.coords.latitude;
+					       logi = position.coords.longitude;
+					     });
+  }
+ else
+   var error = 1;
+</script>
 </head>
 
 <body data-spy="scroll" data-target="#site-nav">
@@ -114,8 +129,9 @@
       </div>
       <form action="index.php#closestation" method="post">
         <div class="row">
-          <div class="col-md-12" id="registration-msg" style="display:none;">
-            <div class="alert"></div>
+          <div class="col-md-12" id="registration-msg">
+            <div id="alert">
+	    </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
@@ -132,6 +148,14 @@
           </div>
       </form>
       </div>
+	    <script>
+	    if (lati != 0)
+	      $("#llat").val(lati);
+	    if (longi != 0)
+	      $("#flong").val(lagi);
+if (lati == 0 && longi == 0)
+  ("#alert").html("Please activate your localisation or enter manualy your coordinates");
+	    </script>
       <div class="container col-md-12">
         <br>
         <script>
