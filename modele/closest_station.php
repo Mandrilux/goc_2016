@@ -19,10 +19,11 @@ function get_close($longitude, $latitude)
     if (isset($min_dist) == false)
       $min_dist = $cur_dist;
     elseif ($min_dist > $cur_dist) 
-    $min_dist = $cur_dist;
+      $min_dist = $cur_dist;
     //print_r($lol);
   }
-return $min_dist;
+  echo $min_dist;
+  return $min_dist;
 }
 
 get_close(6.126, 49.6173);
