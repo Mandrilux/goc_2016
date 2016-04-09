@@ -17,6 +17,7 @@ function get_close($longitude, $latitude)
   //}
   $lol = json_decode($dist);
   //var_dump($);
+  echo $lol->{'rows'};
   print_r($lol);
 return $dist;
 }
