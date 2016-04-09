@@ -109,11 +109,15 @@ include_once('../modele/connexion_sql.php'); ?>
  		var pTop = $('body').scrollTop();
     	console.log( pTop + ' - ' + oTop );
  		if( pTop > oTop ){
-      velo.start();
-      station.start();
+      start_up();
  		}
 	});
 });
+
+function start_up(){
+  velo.start();
+  station.start();
+}
         </script>
       </div>
       <!-- row -->
