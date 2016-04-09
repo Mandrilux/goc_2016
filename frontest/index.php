@@ -77,7 +77,7 @@ include_once('../modele/connexion_sql.php'); ?>
       <div class="row">
         <div class="col-md-4">
           <i class="ion-android-bicycle"></i>
-          <h3><p id="velo"></div><br>Veloh available</h3>
+          <h3><div id="velo"></div><br>Veloh available</h3>
         </div>
         <div class="col-md-4">
           <i class="ion-ios-location"></i>
@@ -91,7 +91,7 @@ include_once('../modele/connexion_sql.php'); ?>
         var easingFn = function (t, b, c, d) {
           var ts = (t /= d) * t;
           var tc = ts * t;
-          return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t) / 2;
+          return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t);
         }
         var options = {
           useEasing : true,
