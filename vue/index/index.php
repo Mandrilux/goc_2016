@@ -1,5 +1,3 @@
-<?php include_once('../modele/connexion_sql.php');
-include_once('../modele/function.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +6,9 @@ include_once('../modele/function.php'); ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Game of code 2016</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../assets/css/main.css">
   <script type="text/javascript" src="https://inorganik.github.io/countUp.js/dist/countUp.js"></script>
 </head>
 
@@ -22,7 +20,7 @@ include_once('../modele/function.php'); ?>
         <div class="site-branding">
           <a class="logo" href="index.html">
             <!-- logo image  -->
-            <!-- <img src="assets/images/logo.png" alt="Logo"> -->
+            <!-- <img src="../../assets/images/logo.png" alt="Logo"> -->
             Game of code 2016
           </a>
         </div>
