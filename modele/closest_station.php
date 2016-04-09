@@ -38,7 +38,7 @@ function get_closest_station($longitude, $latitude)
   //echo $min_dist;
   //echo $id_min_dist;
   $info = get_info_station($id_min_dist);
-  if ($info['nb_dispo_velo'] == 0)
+  if ($info['nb_dispo'] == 0)
   {
     $i = 0;
     $stop = 1;
