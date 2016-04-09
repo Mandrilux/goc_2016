@@ -177,11 +177,18 @@
 
             var start = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
             var end = new google.maps.LatLng(<?php echo $data['latitude'].', '.$data['longitude']; ?>);
+	    <?php if (isset($arrival)) { ?> var dest = new google.maps.LatLng(<?php echo $arrival['latitude'].', '.$arrival['longitude']; ?>); <?php } ?>
             var request = {
               origin: start,
               destination: end,
               travelMode: google.maps.TravelMode.WALKING
             };
+	    <?php if (isset($arrival)) { ?>
+	    var marker = new.google.maps.Marker({
+
+	      })
+
+	      <?php } ?>
             directionsService.route(request, function(result, status) {
               if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(result);
