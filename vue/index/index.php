@@ -204,7 +204,7 @@
           <b><?php echo $data['nb_dispo']; ?></b>
         </div>
         <div class="col-md-2 text-center">
-          <h4>Free parking space:</h4>
+          <h4>Parking space:</h4>
           <br>
           <b><?php echo $data['nb_libre']; ?></b>
         </div>
