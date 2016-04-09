@@ -236,9 +236,9 @@
         </div>
 
         <?php } if (isset($arrival)) { ?>
-        <br>
-        <br>
         <div class="row">
+          <br>
+          <br>
           <div class="col-md-12">
             <h3 class="section-title text-center">Arrival Station</h3>
           </div>
