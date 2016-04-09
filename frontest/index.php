@@ -138,6 +138,7 @@ include_once('../modele/connexion_sql.php'); ?>
 };
 var demo = new CountUp("myTargetElement", 0, 2843, 0, 2.5, options);
 demo.start();
+echo "kk";
   </script>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
