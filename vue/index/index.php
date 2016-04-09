@@ -149,6 +149,9 @@ if (navigator.geolocation)
       </div>
 	    <div class="container col-md-12">
 	    <br>
+	    <?php if (isset($_POST['longitude']) && isset($_POST['latitude']))
+	  { ?>
+
 	    <script>
 	    var Center = new google.maps.LatLng(49.607232, 6.121065);
           var directionsDisplay;
@@ -189,8 +192,8 @@ if (navigator.geolocation)
           google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <div id="gmap" style="width:100%;height:450px;"></div>
-	    <?php if (isset($_POST['longitude']) && isset($_POST['latitude']))
-	  { ?>
+
+
 	    <?php echo $data['nom']; ?><br>
 	    <?php echo $data['nb_dispo']; ?><br>
 	    <?php echo $data['nb_libre']; ?><br>
