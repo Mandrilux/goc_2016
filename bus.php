@@ -1,4 +1,5 @@
 <?php
+
 include_once("modele/function.php");
 
 $URL = 'http://travelplanner.mobiliteit.lu/hafas/query.exe/dot?performLocating=2&tpl=stop2csv&look_maxdist=150000&look_x=6112550&look_y=49610700&stationProxy=yes';
@@ -23,8 +24,12 @@ foreach ($elements as $data)
   curl_setopt($ch2, CURLOPT_USERAGENT, '');
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
-  var_dump($resultat);
-  echo "<br />";
+  $resultat = json_decode($resultat);
+  if (!isset($resultat->{'serverVersion'}))
+    {
+    echo "lol";
+    echo "<br />";
+    }
   $l = 1;
 }
 //var_dump($elements);
