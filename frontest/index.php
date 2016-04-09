@@ -102,21 +102,8 @@ include_once('../modele/connexion_sql.php'); ?>
         }
         var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
         var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
-        $(function() {
-	var oTop = $('.facts').offset().top - window.innerHeight;
-    $(window).scroll(function(){
-
- 		var pTop = $('body').scrollTop();
-    	console.log( pTop + ' - ' + oTop );
- 		if( pTop > oTop ){
-      start_up();
- 		}
-	});
-});
-
-function start_up(){
-  velo.start();
-  station.start();
+        velo.start();
+        station.start();
 }
         </script>
       </div>
