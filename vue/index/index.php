@@ -121,7 +121,7 @@
           <h3 class="section-title">Find the closest station</h3>
         </div>
       </div>
-      <form action="index.php" method="post" >
+      <form action="index.php#closestation" method="post" >
         <div class="row">
           <div class="col-md-12" id="registration-msg" style="display:none;">
             <div class="alert"></div>
