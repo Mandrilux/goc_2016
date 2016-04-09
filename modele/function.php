@@ -30,10 +30,16 @@ function get_info_station($id)
 function get_total_station()
 {
   global $bdd;
-  $req = $bdd->prepare('SELECT COUNT(*) AS "nb" FROM `stations_velo`');
+  $req = $bdd->prepare('SELECT id FROM `stations_velo`');
   $req->execute();
-  $result = $req->fetch();
-  return ($result['nb']);
+  $nb = 0;
+  while ($donne = $req->fetch())
+    {
+      $temp = get_info_station($donne['id']);
+      if ($tmp['status'] == "OPEN")
+	$nb++;
+    }
+  return ($nb);
 }
 
 function get_all_velo()
@@ -45,7 +51,8 @@ function get_all_velo()
   while ($donne = $req->fetch())
     {
       $temp = get_info_station($donne['id']);
-      $total += $temp['nb_dispo'];
+      if ($tmp['status'] == "OPEN")
+	$total += $temp['nb_dispo'];
     }
   return ($total);
 }
