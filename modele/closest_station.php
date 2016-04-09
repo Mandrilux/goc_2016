@@ -1,7 +1,7 @@
 <?php
 
-include_once('modele/connexion_sql.php');
-include_once('modele/function.php');
+include_once('./connexion_sql.php');
+include_once('./function.php');
 
 function get_close($longitude, $latitude)
 {
