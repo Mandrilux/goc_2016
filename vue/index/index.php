@@ -194,27 +194,27 @@
           <br>
         </div>
         <div class="col-md-2 text-center">
-          <b>Name:</b>
+          <b><u>Name:</u></b>
           <br>
           <?php echo $data['nom']; ?>
         </div>
         <div class="col-md-2 text-center">
-          <b>VeloH available: </b>
+          <b><u>VeloH available:</u></b>
           <br>
           <?php echo $data['nb_dispo']; ?>
         </div>
         <div class="col-md-2 text-center">
-          <b>Free parking space:</b>
+          <b><u>Free parking space:</u></b>
           <br>
           <?php echo $data['nb_libre']; ?>
         </div>
         <div class="col-md-2 text-center">
-          <b>Payment point:<br><?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?></b>
+          <b><u>Payment point:</u><br><?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?></b>
         </div>
         <div class="col-md-2 text-center">
-          <b>Status:</b>
+          <b><u>Status:</u>
           <br>
-          <span style='color:green'><?php echo $data['status']; ?></span>
+          <span style='color:green'><?php echo $data['status']; ?></span></b>
         </div>
         <?php } ?>
 
