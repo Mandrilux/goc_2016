@@ -18,14 +18,13 @@ foreach ($elements as $data)
     echo "sub";
     $data = substr($data, 2,strlen($data) - 2);
     }
-  echo '['.$data.']';
-//  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
-//  curl_setopt($ch2, CURLOPT_URL, $URL);
-//  curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
-//  curl_setopt($ch2, CURLOPT_USERAGENT, '');
-//  $resultat = curl_exec ($ch2);
-//  curl_close($ch2);
-  //echo $URL;
+  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
+  curl_setopt($ch2, CURLOPT_URL, $URL);
+  curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch2, CURLOPT_USERAGENT, '');
+  $resultat = curl_exec ($ch2);
+  curl_close($ch2);
+  echo $resultat;
   echo "<br />";
 $l = 1;
   //  var_dump($resultat);
