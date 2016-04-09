@@ -214,7 +214,7 @@
         <div class="col-md-2 text-center">
           <b>Status:</b>
           <br>
-          <?php echo $data['status']; ?>
+          <span style='color:green'><?php echo $data['status']; ?></span>
         </div>
         <?php } ?>
 
