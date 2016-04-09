@@ -51,6 +51,7 @@ function get_closest_station($longitude, $latitude)
       }
     }
   }
+  var_dump($info);
   return ($info);
 }
 
