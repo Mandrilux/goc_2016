@@ -18,7 +18,7 @@ function get_closest_station($longitude, $latitude)
     $stop = 0;
     foreach($tab_data as $data2)
     {
-      //echo "lol";
+      echo "lol";
       $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyCnd5XCv5ks4QDZUhkVbthRlTdrTeij5-Y');
       $dist = json_decode($dist);
       //echo "<br><br>";
