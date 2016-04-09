@@ -14,7 +14,7 @@ foreach ($elements as $data)
 {
   $ch2 = curl_init();
   if ($l)
-    $ch2 = sbstr($ch2,1);
+    $ch2 = substr($ch2,1);
   $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
   curl_setopt($ch2, CURLOPT_URL, $URL);
   curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
