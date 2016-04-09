@@ -25,8 +25,8 @@ function get_close($longitude, $latitude)
       $min_dist = $cur_dist;
     }
   }
-  echo $min_dist;
-  echo "          ".$id_min_dist;
-  return $id_min_dist;
+  //echo $min_dist;
+  //echo $id_min_dist;
+  return get_info_station($id_min_dist);
 }
 ?>
