@@ -46,8 +46,9 @@ function get_closest_station($longitude, $latitude)
       }
     }
   }
-  array_push($info, $min_dist);
+  //array_push($info, $min_dist);
   var_dump($info);
+
   return ($info);
 }
 
