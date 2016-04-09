@@ -36,7 +36,7 @@ function get_total_station()
   while ($donne = $req->fetch())
     {
       $temp = get_info_station($donne['id']);
-      if ($tmp['status'] == "OPEN")
+      if ($temp['status'] == "OPEN")
 	$nb++;
     }
   return ($nb);
@@ -51,7 +51,7 @@ function get_all_velo()
   while ($donne = $req->fetch())
     {
       $temp = get_info_station($donne['id']);
-      if ($tmp['status'] == "OPEN")
+      if ($temp['status'] == "OPEN")
 	$total += $temp['nb_dispo'];
     }
   return ($total);
