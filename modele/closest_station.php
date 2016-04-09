@@ -13,7 +13,7 @@ function get_close($longitude, $latitude)
   while ($data2 = $data->fetch())
   {*/
   $data2 = $data->fetch();
-  $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyAiFLOM5AC0yA0zMrwU-eyWpwo05boG8GI');
+  $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyBzckQd6BmhgKcvHE4JdHwOIUXeXw4MNuw');
   echo $dist;
   //}
   return $dist;
