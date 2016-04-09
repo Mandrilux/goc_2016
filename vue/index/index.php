@@ -144,8 +144,8 @@
 	    <div class="container col-md-12">
 	    <br>
 	    <script>
-	    var myCenter = new google.maps.LatLng($_POST['latitude'], $_POST['longitude']);
-var station = new google.maps.LatLng($data[0]->{'latitude'}, $data[0]->{'longitude'});
+	    var myCenter = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
+var station = new google.maps.LatLng(<?php echo $data[0]->{'latitude'}.', '.$data[0]->{'longitude'}; ?>);
 
           function initialize() {
             var mapProp = {
