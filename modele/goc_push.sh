@@ -1,18 +1,5 @@
 #!/bin/bash
 
+echo "OelFire"
 git pull
 git_push.sh
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-echo "OelFire"
-
-echo "OelFire"
-
