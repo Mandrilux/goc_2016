@@ -213,8 +213,6 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
       }
     });
   }
-
-  google.maps.event.addDomListener(window, 'load', initialize);
     </script>
         <div id="map" style="width:100%;height:450px;"></div>
             </div>
