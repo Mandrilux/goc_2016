@@ -151,12 +151,6 @@
     map = new google.maps.Map(document.getElementById("gmap"), properties);
     directionsDisplay.setMap(map);
 
-    var marker = new google.maps.Marker({
-      position: google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
-      animation: google.maps.Animation.BOUNCE,
-    });
-
-    marker.setMap(map);
     Route();
   }
 
