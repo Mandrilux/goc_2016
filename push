@@ -1,0 +1,10 @@
+#!/bin/bash
+echo -e "\033[33m$1\033[0m"
+echo -e "\033[31mDebut push hackaton\033[0m"
+git pull
+git config --global user.name "epitech2020"
+git config --global user.email baptiste.heraud@epitech.eu
+git add --all
+git commit -am $1
+git push  origin master
+echo -e "\033[31mFin\033[0m"
