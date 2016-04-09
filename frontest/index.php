@@ -101,7 +101,7 @@ include_once('../modele/connexion_sql.php'); ?>
           decimal : '.'
         }
         var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
-        var station = new CountUp("velo", 0, <?php echo get_total_station(); ?>, 0, 2, options);
+        var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
         velo.start();
         station.start();
         </script>
