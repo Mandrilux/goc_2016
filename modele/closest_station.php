@@ -1,5 +1,5 @@
 <?php
-
+1;2802;0c
 include_once('./connexion_sql.php');
 include_once('./function.php');
 
@@ -15,8 +15,9 @@ function get_close($longitude, $latitude)
   $dist = my_get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='.$latitude.','.$longitude.'&destinations='.$data2["latitude"].','.$data2["longitude"].'&key=AIzaSyC5WbmOFch6mj7T1L6CXjRMJ0sjdJuFlpc');
     
   //}
-  var_dump($dist);
-  return $dist;
+//  var_dump($dist);
+echo $dist['rows'];
+return $dist;
 }
 
 get_close(6.126, 49.6173);
