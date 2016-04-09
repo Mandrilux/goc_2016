@@ -3,7 +3,7 @@
 include_once('./connexion_sql.php');
 include_once('./function.php');
 
-function get_close($longitude, $latitude)
+function get_closest_station($longitude, $latitude)
 {
   global $bdd;
   $data = $bdd->prepare('SELECT id, latitude, longitude FROM `stations_velo`');
