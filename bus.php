@@ -18,6 +18,7 @@ foreach ($elements as $data)
   $resultat = curl_exec ($ch);
   curl_close($ch);
   echo $URL;
+  echo "<br />";
   //  var_dump($resultat);
 }
 //var_dump($elements);
