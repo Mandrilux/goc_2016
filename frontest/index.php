@@ -1,5 +1,5 @@
-<?php include_once('../modele/function.php');
-include_once('../modele/connexion_sql.php'); ?>
+<?php include_once('../modele/connexion_sql.php');
+include_once('../modele/function.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,7 +123,8 @@ include_once('../modele/connexion_sql.php'); ?>
       <?php
       function getscope()
       {
-        echo get_closest_station($_POST[longitude], $_POST[longitude]));
+      $data = get_closest_station($_POST[longitude], $_POST[latitude]);
+      echo data['banking'];
       }
        ?>
       <form action="getscope()" id="registration-form">
