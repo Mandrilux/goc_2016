@@ -177,18 +177,20 @@
 
             var start = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
             var end = new google.maps.LatLng(<?php echo $data['latitude'].', '.$data['longitude']; ?>);
-	    <?php if (isset($arrival)) { ?> var dest = new google.maps.LatLng(<?php echo $arrival['latitude'].', '.$arrival['longitude']; ?>); <?php } ?>
+            <?php if (isset($arrival)) { ?>
+            var dest = new google.maps.LatLng(<?php echo $arrival['latitude'].', '.$arrival['longitude']; ?>);
+            <?php } ?>
             var request = {
               origin: start,
               destination: end,
               travelMode: google.maps.TravelMode.WALKING
             };
-	    <?php /*if (isset($arrival)) { ?>
-	    var marker = new.google.maps.Marker({
-	      position: dest
-		  });
-		  marker.setMap(map);
-		  <?php } */?>
+            <?php /*if (isset($arrival)) { ?>
+            var marker = new.google.maps.Marker({
+              position: dest
+            });
+            marker.setMap(map);
+            <?php } */?>
             directionsService.route(request, function(result, status) {
               if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(result);
@@ -204,7 +206,7 @@
         <br>
         <div class="row">
           <div class="col-md-12">
-            <h3 class="section-title text-center">Station de depart</h3>
+            <h3 class="section-title text-center">Departure Station</h3>
           </div>
           <br>
         </div>
@@ -233,40 +235,42 @@
           <b><span style='color:green'><?php echo $data['status']; ?></span></b>
         </div>
 
-	  <?php } if (isset($arrival)) { ?>
-      <br><br>
-	  <div class="col-md-12">
-            <h3 class="section-title text-center">Station d'arrivé</h3>
+        <?php } if (isset($arrival)) { ?>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="section-title text-center">Arrival Station</h3>
           </div>
-          <br>
         </div>
-        <div class="col-md-2 text-center">
-          <h4>Name:</h4>
-          <br>
-          <b><?php echo $arrival['nom']; ?></b>
-        </div>
-        <div class="col-md-2 text-center">
-          <h4>VeloH available:</h4>
-          <br>
-          <b><?php echo $arrival['nb_dispo']; ?></b>
-        </div>
-        <div class="col-md-2 text-center">
-          <h4>Parking space:</h4>
-          <br>
-          <b><?php echo $arrival['nb_libre']; ?></b>
-        </div>
-        <div class="col-md-2 text-center">
-          <h4>Payment point:</h4>
-          <br><b><?php if ($arrival['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?></b>
-        </div>
-        <div class="col-md-2 text-center">
-          <h4>Status:</h4>
-          <br>
-          <b><span style='color:green'><?php echo $data['status']; ?></span></b>
-        </div>
-        <?php } ?>
-
+        <br>
+      <div class="col-md-2 text-center">
+        <h4>Name:</h4>
+        <br>
+        <b><?php echo $arrival['nom']; ?></b>
       </div>
+      <div class="col-md-2 text-center">
+        <h4>VeloH available:</h4>
+        <br>
+        <b><?php echo $arrival['nb_dispo']; ?></b>
+      </div>
+      <div class="col-md-2 text-center">
+        <h4>Parking space:</h4>
+        <br>
+        <b><?php echo $arrival['nb_libre']; ?></b>
+      </div>
+      <div class="col-md-2 text-center">
+        <h4>Payment point:</h4>
+        <br><b><?php if ($arrival['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?></b>
+      </div>
+      <div class="col-md-2 text-center">
+        <h4>Status:</h4>
+        <br>
+        <b><span style='color:green'><?php echo $data['status']; ?></span></b>
+      </div>
+      <?php } ?>
+
+    </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
