@@ -133,11 +133,11 @@
               <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude">
             </div>
           </div>
-          <div class="col-sm-12">
+          <!--<div class="col-sm-12">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Departure address" id="adresse" name="adresse">
             </div>
-          </div>
+          </div>-->
           <div class="col-sm-12">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Arrival address" id="arrival" name="arrival">
@@ -206,7 +206,7 @@
         <br>
         <div class="row">
           <div class="col-md-12">
-            <h3 class="section-title text-center">Departure Station</h3>
+            <h3 class="section-title text-center"><i class="ion-android-walk"></i> Departure Station</h3>
           </div>
           <br>
         </div>
@@ -240,7 +240,7 @@
 
           <div class="col-md-12">
             <h3 class="section-title text-center">          <br>
-                      <br>Arrival Station</h3>
+                      <br><i class="ion-android-bicycle"></i> Arrival Station</h3>
           </div>
         </div>
         <br>
