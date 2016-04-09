@@ -103,7 +103,7 @@ include_once('../modele/connexion_sql.php'); ?>
         var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
         var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
         var bus = new CountUp("bus", 0, 800, 0, 2, options);
-setTimeout(velo.start(), 10000);
+        velo.start();
         station.start();
         bus.start();
         </script>
@@ -120,32 +120,31 @@ setTimeout(velo.start(), 10000);
           <h3 class="section-title">Find the closest station</h3>
         </div>
       </div>
-
-      <form action="display()" id="registration-form">
+      <?php
+      function getscope()
+      {
+        echo get_closest_station($_POST[longitude], $_POST[longitude]));
+      }
+       ?>
+      <form action="getscope()" id="registration-form">
         <div class="row">
           <div class="col-md-12" id="registration-msg" style="display:none;">
             <div class="alert"></div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="test" required>
+              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude" required>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Latitude" id="llat" name="llat" required>
+              <input type="text" class="form-control" placeholder="Latitude" id="llat" name="latitude" required>
             </div>
           </div>
           <div class="text-center mt20">
             <button type="submit" class="btn btn-black" id="registration-submit-btn">Submit</button>
           </div>
       </form>
-      <?php
-function display()
-{
-echo "hello".$_POST["test"];
-}
-?>
       </div>
       <div class="container col-md-12">
         <br>
