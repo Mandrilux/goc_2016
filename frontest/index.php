@@ -103,7 +103,7 @@ include_once('../modele/connexion_sql.php'); ?>
         var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
         var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
         $(function() {
-	var oTop = $('#facts').offset().top - window.innerHeight;
+	var oTop = $('.facts').offset().top - window.innerHeight;
     $(window).scroll(function(){
 
  		var pTop = $('body').scrollTop();
