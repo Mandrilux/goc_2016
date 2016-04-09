@@ -33,5 +33,5 @@ function get_close($longitude, $latitude)
   return $id_min_dist;
 }
 
-get_close(6.126, 49.6173);
+get_close(6.112, 49.5173);
 ?>
