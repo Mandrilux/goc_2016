@@ -10,6 +10,7 @@ curl_setopt($ch, CURLOPT_USERAGENT, '');
 $resultat = curl_exec ($ch);
 curl_close($ch);
 //$resultat = json_decode($resultat);
-var_dump($resultat);
-
+//var_dump($resultat);
+$elements = explode(";", $resultat);
+var_dump($element);
 ?>
