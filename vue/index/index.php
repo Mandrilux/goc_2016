@@ -188,7 +188,7 @@
 	      position: dest
 		  });
 	    market.setMap(map);
-		  <?php} ?>
+		  <?php } ?>
             directionsService.route(request, function(result, status) {
               if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(result);
