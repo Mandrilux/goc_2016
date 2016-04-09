@@ -10,6 +10,9 @@ $resultat = curl_exec ($ch);
 curl_close($ch);
 $elements = explode(";", $resultat);
 foreach ($elements as $data)
+{
+  echo "<br />";
   echo $data;
+}
 //var_dump($elements);
 ?>
