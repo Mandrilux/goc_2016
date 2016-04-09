@@ -65,8 +65,6 @@
             <br>
             <b>Real time avaible Veloh per Station</b>
             <br>
-            <b>Real time Bus timing</b>
-            <br>
           </p>
         </div>
         <!-- /.col-sm-6 -->
