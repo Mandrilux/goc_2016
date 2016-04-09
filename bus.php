@@ -24,10 +24,9 @@ foreach ($elements as $data)
   curl_setopt($ch2, CURLOPT_USERAGENT, '');
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
-  echo $resultat;
+  var_dump($resultat);
   echo "<br />";
-$l = 1;
-  //  var_dump($resultat);
+  $l = 1;
 }
 //var_dump($elements);
 ?>
