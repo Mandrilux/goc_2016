@@ -21,8 +21,8 @@ function get_info_station($id)
 		    'nb_place' => $data->{'bike_stands'},
 		    'nb_libre' => $data->{'available_bike_stands'},
 		    'nb_dispo' => $data->{'available_bikes'},
-		    'longitude' => $data->{'position'}['lng'],
-		    'latitude' => $data->{'position'}['lat']);
+		    'longitude' => $data->{'position'}->{'lng'},
+		    'latitude' => $data->{'position'}->{'lat'});
   return ($new_data);
 }
 
