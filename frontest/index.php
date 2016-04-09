@@ -121,14 +121,14 @@ include_once('../modele/connexion_sql.php'); ?>
         </div>
       </div>
 
-      <form action="#" id="registration-form">
+      <form action="display()" id="registration-form">
         <div class="row">
           <div class="col-md-12" id="registration-msg" style="display:none;">
             <div class="alert"></div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="flong" required>
+              <input type="text" class="form-control" placeholder="Longitude" id="flong" name="test" required>
             </div>
           </div>
           <div class="col-sm-6">
@@ -140,6 +140,12 @@ include_once('../modele/connexion_sql.php'); ?>
             <button type="submit" class="btn btn-black" id="registration-submit-btn">Submit</button>
           </div>
       </form>
+      <?php
+function display()
+{
+echo "hello".$_POST["test"];
+}
+?>
       </div>
       <div class="container col-md-12">
         <br>
