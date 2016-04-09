@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 
-   <head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Game of code 2016, team ADNEOM Student</title>
-   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-   <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
-   <link rel="stylesheet" href="../../assets/css/main.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-   <script src="http://maps.googleapis.com/maps/api/js"></script>
-   <script type="text/javascript" src="https://inorganik.github.io/countUp.js/dist/countUp.js"></script>
-   <script>
-   	 var lati = 0;
-	 var logi = 0;
-if (navigator.geolocation)
-  {
-    navigator.geolocation.getCurrentPosition(function(position)
-					     {
-					       console.log(position);
-	      $("#llat").val(position.coords.latitude);
-	      $("#flong").val(position.coords.longitude);
-					     });
-  }
-</script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game of code 2016, team ADNEOM Student</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="https://inorganik.github.io/countUp.js/dist/countUp.js"></script>
+  <script>
+    var lati = 0;
+    var logi = 0;
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        console.log(position);
+        $("#llat").val(position.coords.latitude);
+        $("#flong").val(position.coords.longitude);
+      });
+    }
+  </script>
 </head>
 
 <body data-spy="scroll" data-target="#site-nav">
@@ -131,8 +129,8 @@ if (navigator.geolocation)
         <div class="row">
           <div class="col-md-12" id="registration-msg">
             <div class="text-center" id="alert">Please activate your localisation or enter manualy your coordinates
-	    </div>
-      <br>
+            </div>
+            <br>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
@@ -149,13 +147,13 @@ if (navigator.geolocation)
           </div>
       </form>
       </div>
-	    <div class="container col-md-12">
-	    <br>
-	    <?php if (isset($_POST['longitude']) && isset($_POST['latitude']))
+      <div class="container col-md-12">
+        <br>
+        <?php if (isset($_POST['longitude']) && isset($_POST['latitude']))
 	  { ?>
 
-	    <script>
-	    var Center = new google.maps.LatLng(49.607232, 6.121065);
+        <script>
+          var Center = new google.maps.LatLng(49.607232, 6.121065);
           var directionsDisplay;
           var directionsService = new google.maps.DirectionsService();
           var map;
@@ -194,19 +192,35 @@ if (navigator.geolocation)
           google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <div id="gmap" style="width:100%;height:450px;"></div>
-        <br><br>
+        <br>
+        <br>
         <div class="row">
           <div class="col-md-12">
             <h3 class="section-title">Station information</h3>
           </div>
           <br>
         </div>
-	    <?php echo $data['nom']; ?><br>
-	    <?php echo $data['nb_dispo']; ?><br>
-	    <?php echo $data['nb_libre']; ?><br>
-	    <?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?><br>
-	    <?php echo $data['status']; ?><br>
-<?php } ?>
+        <div class="col-md-4">
+          <?php echo $data['nom']; ?>
+          <br>
+        </div>
+        <div class="col-md-4">
+        <?php echo $data['nb_dispo']; ?>
+        <br>
+      </div>
+        <div class="col-md-4">
+        <?php echo $data['nb_libre']; ?>
+        <br>
+      </div>
+        <div class="col-md-4">
+        <?php if ($data['banking']) { echo "<span style='color:green'>YES</span>"; } else { echo "<span style='color:red'>NO</span>"; }; ?>
+        <br>
+      </div>
+        <div class="col-md-4">
+        <?php echo $data['status']; ?>
+        <br>
+      </div>
+        <?php } ?>
 
       </div>
   </section>
