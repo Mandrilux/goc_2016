@@ -127,7 +127,18 @@ include_once('../modele/connexion_sql.php'); ?>
         width="100%" height="450" frameborder="0" style="border:0"></iframe>
       </div>
   </section>
-
+  <script>
+  var options = {
+  useEasing : true,
+  useGrouping : false,
+  separator : ',',
+  decimal : '.',
+  prefix : '',
+  suffix : ''
+};
+var demo = new CountUp("myTargetElement", 0, 2843, 0, 2.5, options);
+demo.start();
+  </script>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
       <div class="row">
