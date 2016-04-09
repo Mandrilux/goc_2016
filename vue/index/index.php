@@ -47,7 +47,7 @@
     <div class="intro">
       <h2><i class="ion-android-walk"></i> Walk ?  <i class="ion-android-bicycle"></i> Veloh ?  <i class="ion-android-bus"></i> Bus ?</h2>
       <h1>Find the best way to travel into Luxembourg</h1>
-      <a class="btn btn-white" data-scroll href="#registration">Test Now !</a>
+      <a class="btn btn-white" data-scroll href="#closestation">Test Now !</a>
     </div>
   </header>
   <section id="about" class="section about">
@@ -61,7 +61,9 @@
             <br>
             <b>Use your location to provide a plan to your destination.</b>
             <br>
-            <b></b>
+            <b>Real time avaible Veloh per Station</b>
+            <br>
+            <b>Real time Bus timing</b>
             <br>
           </p>
         </div>
@@ -112,7 +114,7 @@
     <!-- container -->
   </section>
 
-  <section id="registration" class="section registration">
+  <section id="closestation" class="section registration">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -169,8 +171,6 @@
         google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <div id="googleMap" style="width:100%;height:450px;"></div>
-      <!--<iframe src="https://www.google.com/maps/embed/v1/view?zoom=13&center=49.6116%2C6.1319&key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs"
-        width="100%" height="450" frameborder="0" style="border:0"></iframe>-->
       </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
