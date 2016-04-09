@@ -143,8 +143,7 @@
 	    </div>
 	    <div class="container col-md-12">
 	    <br>
-	    <?php var_dump($data); ?>
-	    <script>
+<!--	    <script>
 	    var myCenter = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
 var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[0]['longitude']; ?>);
 
@@ -170,7 +169,42 @@ var station = new google.maps.LatLng(<?php echo $data[0]['latitude'].', '.$data[
 
           google.maps.event.addDomListener(window, 'load', initialize);
         </script>
-        <div id="googleMap" style="width:100%;height:450px;"></div>
+        <div id="googleMap" style="width:100%;height:450px;"></div>-->
+        <div id="map"></div>
+        <script>
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 7,
+          center: {lat: 6.85, lng: 46.65}
+        });
+        directionsDisplay.setMap(map);
+
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        /*document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);*/
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: 6.85,46.65,
+          destination: 6.86, 46.65,
+          travelMode: google.maps.TravelMode.DRIVING
+        }, function(response, status) {
+          if (status === google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyASVb6Re14qqRDWDxs7PJ3mmouNCxIfs&callback=initMap">
+    </script>
       </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
