@@ -16,7 +16,7 @@ foreach ($elements as $data)
   //if ($l)
     //$data = substr($data,1);
   echo '['.$data.']';
-  //$URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
+  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
   curl_setopt($ch2, CURLOPT_URL, $URL);
   curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($ch2, CURLOPT_USERAGENT, '');
