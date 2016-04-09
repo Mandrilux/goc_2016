@@ -85,7 +85,7 @@ include_once('../modele/connexion_sql.php'); ?>
         </div>
         <div class="col-md-4">
           <i class="ion-android-bus"></i>
-          <h3>XX<br>Bus Stop</h3>
+          <h3><div id="bus"></div><br>Bus Stop</h3>
         </div>
         <script>
         var easingFn = function (t, b, c, d) {
@@ -102,8 +102,10 @@ include_once('../modele/connexion_sql.php'); ?>
         }
         var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
         var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
+        var bus = new CountUp("bux", 0, 800, 0, 2, options);
         velo.start();
         station.start();
+        bus.start();
         </script>
       </div>
       <!-- row -->
