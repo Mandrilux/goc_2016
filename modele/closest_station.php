@@ -1,5 +1,5 @@
 <?php
-1;2802;0c
+
 include_once('./connexion_sql.php');
 include_once('./function.php');
 
