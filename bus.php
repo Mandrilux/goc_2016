@@ -12,5 +12,5 @@ curl_close($ch);
 //$resultat = json_decode($resultat);
 //var_dump($resultat);
 $elements = explode(";", $resultat);
-var_dump($element);
+var_dump($elements);
 ?>
