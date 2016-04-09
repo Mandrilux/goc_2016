@@ -103,7 +103,7 @@ include_once('../modele/connexion_sql.php'); ?>
         var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
         var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
         var bus = new CountUp("bus", 0, 800, 0, 2, options);
-setTimeout(velo.start(), 1000);
+setTimeout(velo.start(), 10000);
         station.start();
         bus.start();
         </script>
