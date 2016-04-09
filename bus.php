@@ -8,10 +8,13 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_USERAGENT, '');
 $resultat = curl_exec ($ch);
 curl_close($ch);
+$l = 0;
 $elements = explode(";", $resultat);
 foreach ($elements as $data)
 {
   $ch2 = curl_init();
+  if ($l)
+    $ch2 = sbstr($ch2,1);
   $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
   curl_setopt($ch2, CURLOPT_URL, $URL);
   curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
@@ -20,6 +23,7 @@ foreach ($elements as $data)
   curl_close($ch2);
   echo $URL;
   echo "<br />";
+  $l =1;
   //  var_dump($resultat);
 }
 //var_dump($elements);
