@@ -25,6 +25,8 @@ if (navigator.geolocation)
   }
  else
    var error = 1;
+console.log(lati);
+console.log(logi);
 </script>
 </head>
 
