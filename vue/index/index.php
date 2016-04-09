@@ -20,14 +20,12 @@ if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(function(position)
 					     {
 					       console.log(position);
-					       lati = position.coords.latitude;
-					       logi = position.coords.longitude;
+	      $("#llat").val(position.coords.latitude);
+	      $("#flong").val(position.coords.longitude);
 					     });
   }
  else
    var error = 1;
-console.log(lati);
-console.log(logi);
 </script>
 </head>
 
@@ -152,10 +150,6 @@ console.log(logi);
       </form>
       </div>
 	    <script>
-	    if (lati != 0)
-	      $("#llat").val(lati);
-	    if (logi != 0)
-	      $("#flong").val(logi);
 if (error == 1)
   $("#alert").html("Please activate your localisation or enter manualy your coordinates");
 	    </script>
