@@ -17,7 +17,6 @@
     var logi = 0;
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
-        console.log(position);
         $("#llat").val(position.coords.latitude);
         $("#flong").val(position.coords.longitude);
       });
@@ -106,10 +105,8 @@
           }
           var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
           var station = new CountUp("station", 0, <?php echo get_total_station(); ?>, 0, 2, options);
-          var bus = new CountUp("bus", 0, 800, 0, 2, options);
           velo.start();
           station.start();
-          bus.start();
         </script>
       </div>
       <!-- row -->
