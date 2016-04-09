@@ -127,19 +127,18 @@ include_once('../modele/connexion_sql.php'); ?>
         width="100%" height="450" frameborder="0" style="border:0"></iframe>
       </div>
   </section>
+  <div id="teste"></div>
   <script>
-  var options = {  
-      useEasing: true,
-      useGrouping: true,
-      separator: ',',
-      decimal: '.',
-      prefix: '',  
-      suffix: ''
+  var options = {
+    useEasing : true,
+    easingFn : null,
+    useGrouping : true,
+    separator : ',',
+    decimal : '.'
   }
-  var test = new countUp("count", 1350, 10000, 0, 5000, options);
-  test.start();
+  var demo = new CountUp("teste", 24.02, 94.62, 0, 2, options);
+  demo.start();
   </script>
-  <div id="map"></div>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
       <div class="row">
