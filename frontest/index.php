@@ -77,11 +77,11 @@ include_once('../modele/connexion_sql.php'); ?>
       <div class="row">
         <div class="col-md-4">
           <i class="ion-android-bicycle"></i>
-          <h3><div id="teste"></div><br>Veloh available</h3>
+          <h3><div id="velo"></div><br>Veloh available</h3>
         </div>
         <div class="col-md-4">
           <i class="ion-ios-location"></i>
-          <h3><?php echo get_total_station(); ?><br>Veloh station</h3>
+          <h3><div id="station"></div><br>Veloh station</h3>
         </div>
         <div class="col-md-4">
           <i class="ion-android-bus"></i>
@@ -100,8 +100,10 @@ include_once('../modele/connexion_sql.php'); ?>
           separator : ',',
           decimal : '.'
         }
-        var demo = new CountUp("teste", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
-        demo.start();
+        var velo = new CountUp("velo", 0, <?php echo get_all_velo(); ?>, 0, 2, options);
+        var station = new CountUp("velo", 0, <?php echo get_total_station(); ?>, 0, 2, options);
+        velo.start();
+        station.start();
         </script>
       </div>
       <!-- row -->
