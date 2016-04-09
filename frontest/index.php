@@ -128,17 +128,16 @@ include_once('../modele/connexion_sql.php'); ?>
       </div>
   </section>
   <script>
-  var options = {
-  useEasing : true,
-  useGrouping : false,
-  separator : ',',
-  decimal : '.',
-  prefix : '',
-  suffix : ''
-};
-var demo = new CountUp("myTargetElement", 0, 2843, 0, 2.5, options);
-demo.start();
-echo "kk";
+  var options = {  
+      useEasing: true,
+      useGrouping: true,
+      separator: ',',
+      decimal: '.',
+      prefix: '',  
+      suffix: ''
+  }
+  var test = new countUp("count", 1350, 10000, 0, 5000, options);
+  test.start();
   </script>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
