@@ -22,17 +22,11 @@
             Game of code 2016, team ADNEOM Student
           </a>
         </div>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
-          <span class="sr-only">Test</span>
-          <span class="icon-bar">test2</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
       </div>
       <div class="collapse navbar-collapse" id="navbar-items">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a data-scroll href="#about">Index</a></li>
-          <li><a data-scroll href="#speakers">Truc</a></li>
+          <li><a data-scroll href="#about">Our Goal</a></li>
         </ul>
       </div>
     </div>
