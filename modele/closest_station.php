@@ -13,7 +13,7 @@ function get_closest_station($longitude, $latitude)
   $tab_data = array();
 //  print_r($tab_data);
   while ($data2 = $data->fetch())
-    $tab_data = array_push($tab_data, $data2);
+    array_push($tab_data, $data2);
   foreach($tab_data as $data2)
   {
     echo "lol";
