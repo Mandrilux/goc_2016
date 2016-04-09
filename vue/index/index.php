@@ -94,7 +94,7 @@
             var tc = ts * t;
             return b + c * (tc * ts + -5 * ts * ts + 10 * tc + -10 * ts + 5 * t);
           }
-          var options = {  
+          var options = {
             useEasing: true,
               easingFn: easingFn,
               useGrouping: true,
@@ -144,8 +144,8 @@
       <div class="container col-md-12">
         <br>
         <script>
-          var myCenter = new google.maps.LatLng(51.508742, -0.120842);
-          var station = new google.maps.LatLng(51.50870, -0.120852);
+          var myCenter = new google.maps.LatLng($_POST['latitude'], $_POST['longitude']);
+var station = new google.maps.LatLng($data[0]->{'latitude'}, $data[0]->{'longitude'});
 
           function initialize() {
             var mapProp = {
