@@ -194,7 +194,7 @@ if (navigator.geolocation)
           google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <div id="gmap" style="width:100%;height:450px;"></div>
-
+        <br><br>
         <div class="row">
           <div class="col-md-12">
             <h3 class="section-title">Station information</h3>
