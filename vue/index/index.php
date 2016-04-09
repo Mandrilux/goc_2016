@@ -201,7 +201,7 @@
           <br>
         </div>
         <div class="col-md-3">
-          <b>Name: </b><?php echo $data['nom']; ?>
+          <b>Name:</b><br><?php echo $data['nom']; ?>
         </div>
         <div class="col-md-3">
         <b>VeloH Available: </b><?php echo $data['nb_dispo']; ?>
