@@ -15,13 +15,14 @@ foreach ($elements as $data)
   $ch2 = curl_init();
   if ($l)
     $data = substr($data,1);
-  $URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
+  echo '['.$data.']';
+  //$URL = 'http://travelplanner.mobiliteit.lu/restproxy/departureBoard?accessId=cdt&format=json&'.$data;
   curl_setopt($ch2, CURLOPT_URL, $URL);
   curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($ch2, CURLOPT_USERAGENT, '');
   $resultat = curl_exec ($ch2);
   curl_close($ch2);
-  echo $URL;
+  //echo $URL;
   echo "<br />";
   $l =1;
   //  var_dump($resultat);
