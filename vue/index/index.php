@@ -185,8 +185,8 @@
             };
 	    <?php if (isset($arrival)) { ?>
 	    var marker = new.google.maps.Marker({
-
-	      })
+	      position: dest,
+		  });
 
 	      <?php } ?>
             directionsService.route(request, function(result, status) {
