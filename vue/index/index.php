@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game of code 2016, team ADNEOM Student</title>
+  <title>Game of code 2016, team ADNEOM Be2</title>
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../bower_components/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="../../assets/css/main.css">
@@ -30,7 +30,7 @@
       <div class="navbar-header">
         <div class="site-branding">
           <a class="logo" href="index.php">
-            Game of code 2016, team ADNEOM Student
+            Game of code 2016, team ADNEOM Be2
           </a>
         </div>
       </div>
@@ -133,9 +133,14 @@
               <input type="text" class="form-control" placeholder="Longitude" id="flong" name="longitude" required>
             </div>
           </div>
-	  <div class="col-sm-12">
+          <div class="col-sm-12">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Adresse" id="adresse" name="adresse" >
+              <input type="text" class="form-control" placeholder="Departure adresse" id="adresse" name="adresse">
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Arrival adresse" id="arrival" name="arrival">
             </div>
           </div>
           <div class="text-center mt20">
