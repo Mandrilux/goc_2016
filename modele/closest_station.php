@@ -50,4 +50,6 @@ function get_closest_station($longitude, $latitude)
   return ($info);
 }
 
+get_closest_station(6, 49);
+
 ?>
