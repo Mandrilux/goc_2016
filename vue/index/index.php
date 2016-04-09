@@ -37,7 +37,7 @@
       <div class="collapse navbar-collapse" id="navbar-items">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a data-scroll href="#site-nav">Index</a></li>
-          <li><a data-scroll href="#about">Our Goal</a></li>
+          <li><a data-scroll href="#about">Our Goals</a></li>
           <li><a data-scroll href="#closestation">Find Station</a></li>
           <li><a data-scroll href="#contribution">Health</a></li>
         </ul>
@@ -56,7 +56,7 @@
     <div class="container">
       <div class="row">
         <div class=".col-xs-4 .col-sm-8 .col-md-6 .col-md-offset-3">
-          <h3 class="section-title multiple-title">What is Our Goal?</h3>
+          <h3 class="section-title multiple-title">What is Our Goals?</h3>
           <p class="text-center">Make your everyday life easier</p>
           <p class="text-center">
             <b>Find the closest and fastest way to travel.</b>
