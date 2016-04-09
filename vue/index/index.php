@@ -39,7 +39,7 @@
           <li class="active"><a data-scroll href="#site-nav">Index</a></li>
           <li><a data-scroll href="#about">Our Goal</a></li>
           <li><a data-scroll href="#closestation">Find Station</a></li>
-          <li><a data-scroll href="#health">Health</a></li>
+          <li><a data-scroll href="#contribution">Health</a></li>
         </ul>
       </div>
     </div>
@@ -63,7 +63,7 @@
             <br>
             <b>Use your location to provide a plan to your destination.</b>
             <br>
-            <b>Real time avaible Veloh per Station</b>
+            <b>Real time available VeloH per Station</b>
             <br>
           </p>
         </div>
