@@ -118,11 +118,6 @@ function start_up(){
   velo.start();
   station.start();
 }
-$('.facts').waypoint(function() {
-    alert('You have scrolled to an entry.');
-}, {
-    offset: '100%'
-});
         </script>
       </div>
       <!-- row -->
