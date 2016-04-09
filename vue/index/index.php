@@ -112,7 +112,7 @@
           <h3 class="section-title">Find the closest station</h3>
         </div>
       </div>
-      <form action="index.php#closestation" method="post" >
+      <form action="index.php#closestation" method="post">
         <div class="row">
           <div class="col-md-12" id="registration-msg" style="display:none;">
             <div class="alert"></div>
@@ -128,53 +128,53 @@
             </div>
           </div>
           <div class="text-center mt20">
-            <button type="submit" class="btn btn-black" >Find</button>
-	    </div>
-	    </form>
-	    </div>
-	    <div class="container col-md-12">
-	    <br>
+            <button type="submit" class="btn btn-black">Find</button>
+          </div>
+      </form>
+      </div>
+      <div class="container col-md-12">
+        <br>
         <script>
-        var Center = new google.maps.LatLng(49.607232, 6.121065);
-  var directionsDisplay;
-  var directionsService = new google.maps.DirectionsService();
-  var map;
+          var Center = new google.maps.LatLng(49.607232, 6.121065);
+          var directionsDisplay;
+          var directionsService = new google.maps.DirectionsService();
+          var map;
 
-  function initialize() {
-    directionsDisplay = new google.maps.DirectionsRenderer();
-    var properties = {
-      center: Center,
-      zoom: 8,
-      mapTypeId: google.maps.MapTypeId.SATELLITE
-    };
+          function initialize() {
+            directionsDisplay = new google.maps.DirectionsRenderer();
+            var properties = {
+              center: Center,
+              zoom: 8,
+              mapTypeId: google.maps.MapTypeId.SATELLITE
+            };
 
-    map = new google.maps.Map(document.getElementById("gmap"), properties);
-    directionsDisplay.setMap(map);
+            map = new google.maps.Map(document.getElementById("gmap"), properties);
+            directionsDisplay.setMap(map);
 
-    Route();
-  }
+            Route();
+          }
 
-  function Route() {
+          function Route() {
 
-    var start = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
-    var end = new google.maps.LatLng(<?php echo $data['latitude'].', '.$data['longitude']; ?>);
-    var request = {
-      origin: start,
-      destination: end,
-      travelMode: google.maps.TravelMode.WALKING
-    };
-    directionsService.route(request, function(result, status) {
-      if (status == google.maps.DirectionsStatus.OK) {
-        directionsDisplay.setDirections(result);
-      } else {
-        alert("couldn't get directions:" + status);
-      }
-    });
-  }
-google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+            var start = new google.maps.LatLng(<?php echo $_POST['latitude'].', '.$_POST['longitude']; ?>);
+            var end = new google.maps.LatLng(<?php echo $data['latitude'].', '.$data['longitude']; ?>);
+            var request = {
+              origin: start,
+              destination: end,
+              travelMode: google.maps.TravelMode.WALKING
+            };
+            directionsService.route(request, function(result, status) {
+              if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(result);
+              } else {
+                alert("couldn't get directions:" + status);
+              }
+            });
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
         <div id="gmap" style="width:100%;height:450px;"></div>
-            </div>
+      </div>
   </section>
   <section id="contribution" class="section bg-image-2 contribution">
     <div class="container">
@@ -194,14 +194,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p class="site-info">Designed and
-            <br> Developed by <a href="http://technextit.com">Technext Limited</a></p>
-          <ul class="social-block">
+          <p class="site-info">
+            Designed by <a href="http://technextit.com">Technext Limited</a></p>
+          <!--<ul class="social-block">
             <li><a href=""><i class="ion-social-twitter"></i></a></li>
             <li><a href=""><i class="ion-social-facebook"></i></a></li>
             <li><a href=""><i class="ion-social-linkedin-outline"></i></a></li>
             <li><a href=""><i class="ion-social-googleplus"></i></a></li>
-          </ul>
+          </ul>-->
         </div>
       </div>
     </div>
